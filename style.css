@@ -1,0 +1,1536 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Handjet:wght@100..900&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Handjet:wght@100..900&family=Knewave&family=Press+Start+2P&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Handjet:wght@100..900&family=Knewave&family=Press+Start+2P&family=Rubik+Glitch&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Exo:ital,wght@0,100..900;1,100..900&family=Handjet:wght@100..900&family=Knewave&family=Press+Start+2P&family=Rubik+Glitch&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=DynaPuff:wght@400..700&family=Exo:ital,wght@0,100..900;1,100..900&family=Handjet:wght@100..900&family=Knewave&family=Press+Start+2P&family=Rubik+Glitch&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=DynaPuff:wght@400..700&family=Exo:ital,wght@0,100..900;1,100..900&family=Handjet:wght@100..900&family=Knewave&family=Press+Start+2P&family=Rubik+Glitch&family=Rubik+Marker+Hatch&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+
+
+.clock-text {
+    font: bold 20px Papyrus, sans-serif;
+    margin: 0;
+    display: block;
+}
+
+.bar1 {
+    width: 100%;
+    background-color: green;
+    height: 20px;
+    border-radius: 50px;
+    font: bold 20px "Handjet", Papyrus, sans-serif;
+    text-align: center;
+    animation: progress 1500ms ease-in 1;
+}
+
+.bar2 {
+    width: 100%;
+    background-color: rgb(255, 0, 0);
+    height: 20px;
+    border-radius: 50px;
+    font: bold 20px "Handjet", Papyrus, sans-serif;
+    text-align: center;
+}
+
+.bar3 {
+    width: 100%;
+    background-color: rgb(0, 47, 255);
+    height: 20px;
+    border-radius: 50px;
+    font: bold 20px "Handjet", Papyrus, sans-serif;
+    text-align: center;
+}
+
+.bar4 {
+    width: 100%;
+    background-color: rgb(221, 255, 0);
+    height: 20px;
+    border-radius: 50px;
+    font: bold 20px "Handjet", Papyrus, sans-serif;
+    text-align: center;
+}
+
+
+
+.lijn1 {
+    font: bolder 55px "SUSE", Papyrus, sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px;
+    text-decoration: underline;
+}
+
+.lijn2 {
+    font: 30px "Handjet", Papyrus, sans-serif;
+    text-align: center;
+    font-style: oblique;
+}
+
+.lijn3 {
+    font: bold 40px "SUSE", Papyrus, sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    text-shadow: 2px 2px;
+}
+
+.lijn4 {
+    font: 30px "Handjet", Papyrus, sans-serif;
+    text-align: center;
+    font-style: oblique;
+}
+
+.project1 {
+    width: fit-content;
+    height: 150px;
+    padding: 30px;
+    border: 5px solid rgb(0, 4, 255);
+    margin: auto;
+    text-align: center;
+    background-color: rgba(26, 110, 255, 0.667);
+    border-radius: 25px;
+}
+
+.lijn5 {
+    font: 15px "Press Start 2P", Papyrus, sans-serif;
+}
+
+.project2 {
+    font: 15px "Press Start 2P", Papyrus, sans-serif;
+    width: fit-content;
+    height: 70px;
+    padding: 30px;
+    border: 5px solid rgb(0, 4, 255);
+    margin: auto;
+    text-align: center;
+    background-color: rgba(26, 110, 255, 0.667);
+    border-radius: 25px;
+}
+
+.lijn6 {
+    font: bold 40px "SUSE", Papyrus, sans-serif;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.lijn7 {
+    font: bold 30px "Handjet", Papyrus, sans-serif;
+    text-align: center;
+    font-style: oblique;
+}
+
+.xp1 {
+    font: 15px "Press Start 2P", Papyrus, sans-serif;
+    width: 500px;
+    height: 50px;
+    padding: 30px;
+    border: 5px solid rgb(0, 4, 255);
+    margin: auto;
+    text-align: center;
+    background-color: rgba(26, 110, 255, 0.667);
+    border-radius: 25px;
+}
+
+.xp2 {
+    font: 15px "Press Start 2P", Papyrus, sans-serif;
+    width: 500px;
+    height: 50px;
+    padding: 30px;
+    border: 5px solid rgb(0, 4, 255);
+    margin: auto;
+    text-align: center;
+    background-color: rgba(26, 110, 255, 0.667);
+    border-radius: 25px;
+}
+
+.xp3 {
+    font: 15px "Press Start 2P", Papyrus, sans-serif;
+    width: 500px;
+    height: 50px;
+    padding: 30px;
+    border: 5px solid rgb(0, 4, 255);
+    margin: auto;
+    text-align: center;
+    background-color: rgba(26, 110, 255, 0.667);
+    border-radius: 25px;
+}
+
+.boven {
+    width: 330px;
+    height: 100px;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+}
+
+.lijn8 {
+    font: bold 40px "SUSE", Papyrus, sans-serif;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.lijn9 {
+    font: 30px "Handjet", Papyrus, sans-serif;
+    text-align: center;
+    font-style: oblique;
+}
+
+.techs {
+    width: fit-content;
+    height: 50px;
+    padding: 20px;
+    border: 5px solid rgb(0, 4, 255);
+    margin: auto;
+    text-align: center;
+    background-color: rgba(197, 218, 255, 0.824)
+}
+
+.techsdiv {
+    width: fit-content;
+    height: auto;
+    padding: 5px;
+    border: 5px solid rgb(0, 4, 255);
+    margin: auto;
+    text-align: center;
+    background-color: rgba(26, 110, 255, 0.667);
+    border-radius: 25px;
+}
+
+.lijn10 {
+    font: bold 40px "SUSE", Papyrus, sans-serif;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.lijn11 {
+    font: 30px "Handjet", Papyrus, sans-serif;
+    text-align: center;
+    font-style: oblique;
+}
+
+.progress {
+    box-sizing: content-box;
+    height: 20px;
+    position: relative;
+    margin: 60px 0 20px 0;
+    background: #555;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: inset 0 -1px 1px rgba(30, 255, 0, 0.3);
+}
+
+.progress2 {
+    box-sizing: content-box;
+    height: 20px;
+    position: relative;
+    margin: 60px 0 20px 0;
+    background: #555;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: inset 0 -1px 1px rgba(30, 255, 0, 0.3);
+}
+
+.progress3 {
+    box-sizing: content-box;
+    height: 20px;
+    position: relative;
+    margin: 60px 0 20px 0;
+    background: #555;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: inset 0 -1px 1px rgba(30, 255, 0, 0.3);
+}
+
+.progress4 {
+    box-sizing: content-box;
+    height: 20px;
+    position: relative;
+    margin: 60px 0 20px 0;
+    background: #555;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: inset 0 -1px 1px rgba(30, 255, 0, 0.3);
+}
+
+body {
+    background-color: rgba(0, 16, 94, 0.872);
+    background-blend-mode: color;
+    animation: colorTransition 20s infinite alternate;
+}
+
+@keyframes colorTransition {
+    0% {
+        background-color: rgba(0, 16, 94, 0.872);
+    }
+
+    25% {
+        background-color: rgba(0, 22, 134, 0.872);
+    }
+
+    50% {
+        background-color: rgba(22, 39, 121, 0.872);
+    }
+
+    75% {
+        background-color: rgba(0, 34, 201, 0.872);
+    }
+
+    100% {
+        background-color: rgba(0, 140, 255, 0.872);
+    }
+}
+
+.github {
+    position: relative;
+    display: inline-block;
+}
+
+.github .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.github:hover .tooltiptext {
+    visibility: visible;
+}
+
+.discord {
+    position: relative;
+    display: inline-block;
+}
+
+.discord .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.discord:hover .tooltiptext {
+    visibility: visible;
+}
+
+.clock {
+    pointer-events: none;
+    width: 180px;
+    height: auto;
+    padding: 5px;
+    border: 5px solid rgb(0, 4, 255);
+    margin: auto;
+    text-align: center;
+    background-color: rgba(26, 110, 255, 0.667);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.aternos {
+    position: relative;
+    display: inline-block;
+}
+
+.aternos .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.aternos:hover .tooltiptext {
+    visibility: visible;
+}
+
+.cloudflare {
+    position: relative;
+    display: inline-block;
+}
+
+.cloudflare .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.cloudflare:hover .tooltiptext {
+    visibility: visible;
+}
+
+.css {
+    position: relative;
+    display: inline-block;
+}
+
+.css .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.css:hover .tooltiptext {
+    visibility: visible;
+}
+
+.flask {
+    position: relative;
+    display: inline-block;
+}
+
+.flask .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.flask:hover .tooltiptext {
+    visibility: visible;
+}
+
+.freenom {
+    position: relative;
+    display: inline-block;
+}
+
+.freenom .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.freenom:hover .tooltiptext {
+    visibility: visible;
+}
+
+.gsites {
+    position: relative;
+    display: inline-block;
+}
+
+.gsites .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.gsites:hover .tooltiptext {
+    visibility: visible;
+}
+
+.html {
+    position: relative;
+    display: inline-block;
+}
+
+.html .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.html:hover .tooltiptext {
+    visibility: visible;
+}
+
+.lubuntu {
+    position: relative;
+    display: inline-block;
+}
+
+.lubuntu .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.lubuntu:hover .tooltiptext {
+    visibility: visible;
+}
+
+.lxmint {
+    position: relative;
+    display: inline-block;
+}
+
+.lxmint .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.lxmint:hover .tooltiptext {
+    visibility: visible;
+}
+
+.pterodactyl {
+    position: relative;
+    display: inline-block;
+}
+
+.pterodactyl .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.pterodactyl:hover .tooltiptext {
+    visibility: visible;
+}
+
+.pycharm {
+    position: relative;
+    display: inline-block;
+}
+
+.pycharm .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.pycharm:hover .tooltiptext {
+    visibility: visible;
+}
+
+.python {
+    position: relative;
+    display: inline-block;
+}
+
+.python .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.python:hover .tooltiptext {
+    visibility: visible;
+}
+
+.replit {
+    position: relative;
+    display: inline-block;
+}
+
+.replit .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.replit:hover .tooltiptext {
+    visibility: visible;
+}
+
+.rpi {
+    position: relative;
+    display: inline-block;
+}
+
+.rpi .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.rpi:hover .tooltiptext {
+    visibility: visible;
+}
+
+.ubuntu {
+    position: relative;
+    display: inline-block;
+}
+
+.ubuntu .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.ubuntu:hover .tooltiptext {
+    visibility: visible;
+}
+
+.virtualbox {
+    position: relative;
+    display: inline-block;
+}
+
+.virtualbox .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.virtualbox:hover .tooltiptext {
+    visibility: visible;
+}
+
+.vscode {
+    position: relative;
+    display: inline-block;
+}
+
+.vscode .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.vscode:hover .tooltiptext {
+    visibility: visible;
+}
+
+.winxp {
+    position: relative;
+    display: inline-block;
+}
+
+.winxp .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.winxp:hover .tooltiptext {
+    visibility: visible;
+}
+
+.win7 {
+    position: relative;
+    display: inline-block;
+}
+
+.win7 .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.win7:hover .tooltiptext {
+    visibility: visible;
+}
+
+.win10 {
+    position: relative;
+    display: inline-block;
+}
+
+.win10 .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.win10:hover .tooltiptext {
+    visibility: visible;
+}
+
+.wix {
+    position: relative;
+    display: inline-block;
+}
+
+.wix .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.wix:hover .tooltiptext {
+    visibility: visible;
+}
+
+.wix {
+    transition: transform .2s;
+}
+
+.wix:hover {
+    transform: scale(1.1);
+}
+
+.aternos {
+    transition: transform .2s;
+}
+
+.aternos:hover {
+    transform: scale(1.1);
+}
+
+.cloudflare {
+    transition: transform .2s;
+}
+
+.cloudflare:hover {
+    transform: scale(1.1);
+}
+
+.css {
+    transition: transform .2s;
+}
+
+.css:hover {
+    transform: scale(1.1);
+}
+
+.flask {
+    transition: transform .2s;
+}
+
+.flask:hover {
+    transform: scale(1.1);
+}
+
+.freenom {
+    transition: transform .2s;
+}
+
+.freenom:hover {
+    transform: scale(1.1);
+}
+
+.github {
+    transition: transform .2s;
+}
+
+.github:hover {
+    transform: scale(1.1);
+}
+
+.gsites {
+    transition: transform .2s;
+}
+
+.gsites:hover {
+    transform: scale(1.1);
+}
+
+.html {
+    transition: transform .2s;
+}
+
+.html:hover {
+    transform: scale(1.1);
+}
+
+.lubuntu {
+    transition: transform .2s;
+}
+
+.lubuntu:hover {
+    transform: scale(1.1);
+}
+
+.lxmint {
+    transition: transform .2s;
+}
+
+.lxmint:hover {
+    transform: scale(1.1);
+}
+
+.pterodactyl {
+    transition: transform .2s;
+}
+
+.pterodactyl:hover {
+    transform: scale(1.1);
+}
+
+.pycharm {
+    transition: transform .2s;
+}
+
+.pycharm:hover {
+    transform: scale(1.1);
+}
+
+.python {
+    transition: transform .2s;
+}
+
+.python:hover {
+    transform: scale(1.1);
+}
+
+.replit {
+    transition: transform .2s;
+}
+
+.replit:hover {
+    transform: scale(1.1);
+}
+
+.rpi {
+    transition: transform .2s;
+}
+
+.rpi:hover {
+    transform: scale(1.1);
+}
+
+.ubuntu {
+    transition: transform .2s;
+}
+
+.ubuntu:hover {
+    transform: scale(1.1);
+}
+
+.virtualbox {
+    transition: transform .2s;
+}
+
+.virtualbox:hover {
+    transform: scale(1.1);
+}
+
+.vscode {
+    transition: transform .2s;
+}
+
+.vscode:hover {
+    transform: scale(1.1);
+}
+
+.winxp {
+    transition: transform .2s;
+}
+
+.winxp:hover {
+    transform: scale(1.1);
+}
+
+.win7 {
+    transition: transform .2s;
+}
+
+.win7:hover {
+    transform: scale(1.1);
+}
+
+.win10 {
+    transition: transform .2s;
+}
+
+.win10:hover {
+    transform: scale(1.1);
+}
+
+.wix {
+    transition: transform .2s;
+}
+
+.wix:hover {
+    transform: scale(1.1);
+}
+
+.discord {
+    transition: transform .2s;
+}
+
+.discord:hover {
+    transform: scale(1.1);
+}
+
+.alinea1 {
+    transition-duration: 4s;
+}
+
+.alinea1:hover {
+    background-color: rgb(0, 200, 255);
+    border-radius: 25px;
+}
+
+.alinea2 {
+    transition-duration: 4s;
+}
+
+.alinea2:hover {
+    background-color: rgb(0, 200, 255);
+    border-radius: 25px;
+}
+
+.alinea3 {
+    transition-duration: 4s;
+}
+
+.alinea3:hover {
+    background-color: rgb(0, 200, 255);
+    border-radius: 25px;
+}
+
+.alinea4 {
+    transition-duration: 4s;
+}
+
+.alinea4:hover {
+    background-color: rgb(0, 200, 255);
+    border-radius: 25px;
+}
+
+.alinea5 {
+    transition-duration: 4s;
+}
+
+.alinea5:hover {
+    background-color: rgb(0, 200, 255);
+    border-radius: 25px;
+}
+
+.proj1 {
+    transition: transform .2s;
+}
+
+.proj1:hover {
+    transform: scale(0.9);
+}
+
+.proj2 {
+    transition: transform .2s;
+}
+
+.proj2:hover {
+    transform: scale(0.9);
+}
+
+.exp1 {
+    transition: transform .2s;
+}
+
+.exp1:hover {
+    transform: scale(0.9);
+}
+
+.exp2 {
+    transition: transform .2s;
+}
+
+.exp2:hover {
+    transform: scale(0.9);
+}
+
+.exp3 {
+    transition: transform .2s;
+}
+
+.exp3:hover {
+    transform: scale(0.9);
+}
+
+.prog1 {
+    transition: transform .2s;
+}
+
+.prog1:hover {
+    transform: scale(0.9);
+}
+
+.prog2 {
+    transition: transform .2s;
+}
+
+.prog2:hover {
+    transform: scale(0.9);
+}
+
+.prog3 {
+    transition: transform .2s;
+}
+
+.prog3:hover {
+    transform: scale(0.9);
+}
+
+.prog4 {
+    transition: transform .2s;
+}
+
+.prog4:hover {
+    transform: scale(0.9);
+}
+
+.boven {
+    border: 30px solid transparent;
+    border-image: url(xpborder.png) 30 round;
+    height: fit-content;
+    padding: auto;
+    margin: auto;
+    text-align: center;
+    background-color: rgba(255, 187, 0, 0.694);
+    font: bolder 20px "SUSE", Papyrus, sans-serif;
+}
+
+.techsdiv>div>img {
+    border-radius: 25px;
+}
+
+.boven {
+    transition: transform .2s;
+}
+
+.boven:hover {
+    transform: scale(1.1);
+}
+
+.navigatie {
+    position: sticky;
+    top: 0;
+    background-color: rgb(0, 51, 255);
+    border: 2px solid #001392;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    z-index: 9;
+    border-radius: 1000px;
+}
+
+.buttons {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font: bolder 20px "Handjet", Papyrus, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1000px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.buttons {
+    background-color: #03a045;
+    color: black;
+    border: 2px solid #03a045;
+}
+
+.buttons:hover {
+    background-color: rgb(0, 255, 191);
+    color: black;
+    transform: scale(0.9);
+}
+
+.buttons1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+.buttons2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+.interestingbutton {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    display: block;
+    margin: auto;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1000px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font: bolder 20px "Handjet", Papyrus, sans-serif;
+}
+
+
+
+
+.interestingbutton {
+    background-color: #03a045;
+    color: black;
+    border: 2px solid #03a045;
+}
+
+.interestingbutton:hover {
+    background-color: rgb(0, 255, 191);
+    color: black;
+    transform: scale(0.9);
+}
+
+@media only screen and (max-width: 1000px) {
+    .project1 {
+        width: fit-content;
+        height: 300px;
+        padding: 30px;
+        border: 5px solid rgb(0, 4, 255);
+        margin: auto;
+        text-align: center;
+        background-color: rgba(26, 110, 255, 0.667)
+    }
+
+    .project2 {
+        font: 15px "Press Start 2P", Papyrus, sans-serif;
+        width: fit-content;
+        height: 250px;
+        padding: 30px;
+        border: 5px solid rgb(0, 4, 255);
+        margin: auto;
+        text-align: center;
+        background-color: rgba(26, 110, 255, 0.667)
+    }
+
+    .xp1 {
+        font: 15px "Press Start 2P", Papyrus, sans-serif;
+        width: fit-content;
+        height: 100px;
+        padding: 30px;
+        border: 5px solid rgb(0, 4, 255);
+        margin: auto;
+        text-align: center;
+        background-color: rgba(26, 110, 255, 0.667)
+    }
+
+    .xp2 {
+        font: 15px "Press Start 2P", Papyrus, sans-serif;
+        width: fit-content;
+        height: 100px;
+        padding: 30px;
+        border: 5px solid rgb(0, 4, 255);
+        margin: auto;
+        text-align: center;
+        background-color: rgba(26, 110, 255, 0.667)
+    }
+
+    .xp3 {
+        font: 15px "Press Start 2P", Papyrus, sans-serif;
+        width: fit-content;
+        height: 100px;
+        padding: 30px;
+        border: 5px solid rgb(0, 4, 255);
+        margin: auto;
+        text-align: center;
+        background-color: rgba(26, 110, 255, 0.667)
+    }
+
+    .boven {
+        border: 30px solid transparent;
+        border-image: url(xpborder.png) 30 round;
+        width: fit-content;
+        height: fit-content;
+        padding: auto;
+        margin: auto;
+        text-align: center;
+        background-color: rgba(255, 196, 0, 0.603);
+        font: bolder 20px "SUSE", Papyrus, sans-serif;
+    }
+
+    .navigatie {
+        position: sticky;
+        background-color: rgb(0, 51, 255);
+        border: 2px solid #001392;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        z-index: 9;
+        border-radius: 1000px;
+    }
+
+    .buttons {
+        border: none;
+        color: rgb(0, 0, 0);
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        font: bolder 20px "Handjet", Papyrus, sans-serif;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 1000px;
+        flex-direction: column;
+    }
+
+    .buttons1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+    }
+
+    .buttons2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+    }
+
+
+}
+
+
+
+@media only screen and ((min-width: 600px)(max-width: 1000px)) {
+    .project1 {
+        width: fit-content;
+        height: 300px;
+        padding: 30px;
+        border: 5px solid rgb(0, 4, 255);
+        margin: auto;
+        text-align: center;
+        background-color: rgba(26, 110, 255, 0.667)
+    }
+
+    .project2 {
+        font: 15px "Press Start 2P", Papyrus, sans-serif;
+        width: fit-content;
+        height: 250px;
+        padding: 30px;
+        border: 5px solid rgb(0, 4, 255);
+        margin: auto;
+        text-align: center;
+        background-color: rgba(26, 110, 255, 0.667)
+    }
+
+    .xp1 {
+        font: 15px "Press Start 2P", Papyrus, sans-serif;
+        width: fit-content;
+        height: 100px;
+        padding: 30px;
+        border: 5px solid rgb(0, 4, 255);
+        margin: auto;
+        text-align: center;
+        background-color: rgba(26, 110, 255, 0.667)
+    }
+
+    .xp2 {
+        font: 15px "Press Start 2P", Papyrus, sans-serif;
+        width: fit-content;
+        height: 100px;
+        padding: 30px;
+        border: 5px solid rgb(0, 4, 255);
+        margin: auto;
+        text-align: center;
+        background-color: rgba(26, 110, 255, 0.667)
+    }
+
+    .xp3 {
+        font: 15px "Press Start 2P", Papyrus, sans-serif;
+        width: fit-content;
+        height: 100px;
+        padding: 30px;
+        border: 5px solid rgb(0, 4, 255);
+        margin: auto;
+        text-align: center;
+        background-color: rgba(26, 110, 255, 0.667)
+    }
+
+    .boven {
+        border: 30px solid transparent;
+        border-image: url(xpborder.png) 30 round;
+        width: fit-content;
+        height: fit-content;
+        padding: auto;
+        margin: auto;
+        text-align: center;
+        background-color: rgba(255, 196, 0, 0.603);
+        font: bolder 20px "SUSE", Papyrus, sans-serif;
+    }
+
+    .navigatie {
+        position: sticky;
+        top: 0;
+        background-color: rgb(0, 51, 255);
+        border: 2px solid #001392;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        z-index: 9;
+        border-radius: 1000px;
+    }
+
+    .buttons {
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        font: bolder 20px "Handjet", Papyrus, sans-serif;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 1000px;
+        flex-direction: row;
+    }
+
+    .buttons1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .buttons2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+}
