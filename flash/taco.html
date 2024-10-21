@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tut {
+            text-align: center;
+        }
+
+        .btn {
+            position: absolute;
+        }
+
+        .hotdog {
+            border: 1px solid #000;
+            /* zwart kader */
+            padding: 10px;
+            /* ruimte tussen inhoud en kader */
+            display: flex;
+            /* gebruik flexbox */
+            flex-direction: column;
+            /* items verticaal stapelen */
+            align-items: center;
+            /* items horizontaal centreren */
+            justify-content: center;
+            /* items verticaal centreren */
+            height: 100%;
+            /* zorg ervoor dat de div een hoogte heeft */
+        }
+
+        /* Voeg stijl toe voor de textarea */
+        #copy {
+            width: 100%;
+            /* breedte op 100% instellen */
+            height: auto;
+            /* hoogte automatisch */
+            overflow: hidden;
+            /* verberg scrollbars */
+            resize: none;
+            /* voorkom dat de gebruiker de grootte kan wijzigen */
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html">
+        <img src="home.png" style="width: 50px; height: auto;">
+    </a>
+    <br>
+    <br>
+    <iframe src="https://flash.fsh.plus/" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+    <div class="hotdog">
+
+        <textarea id="copy" readonly
+            oninput="autoResize(this)">https://github.com/VulcanoSoftware/swf/raw/refs/heads/main/taco.swf</textarea>
+        <br>
+        <button onclick="copyText()">Kopieer tekst</button>
+
+        <script>
+            function copyText() {
+                // Selecteer de tekst in het textarea
+                var copyText = document.getElementById("copy");
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); // Voor mobiele apparaten
+
+                // Kopieer de geselecteerde tekst naar het klembord
+                document.execCommand("copy");
+
+                // Optioneel: Geef een melding dat de tekst is gekopieerd
+                alert("Tekst gekopieerd: " + copyText.value);
+            }
+
+            function autoResize(textarea) {
+                textarea.style.height = 'auto'; // Reset de hoogte
+                textarea.style.height = textarea.scrollHeight + 'px'; // Stel de hoogte in op basis van de inhoud
+            }
+
+            // Initialiseer de hoogte bij het laden van de pagina
+            window.onload = function () {
+                autoResize(document.getElementById('copy'));
+            }
+        </script>
+    </div>
+    <br>
+    <br>
+    <div class="tut">
+        <a href="tutorial.pdf" target="_blank" class="btn">
+            <button>how to start a game</button>
+        </a>
+    </div>
+    <br>
+    <br>
+
+</body>
+
+</html>
