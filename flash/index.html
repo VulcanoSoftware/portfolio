@@ -219,6 +219,55 @@
             width: 120px;
             height: auto;
         }
+
+
+
+
+        .line5 {
+            width: 100px;
+            /* Zorgt voor consistente breedte */
+            margin: 0 2px;
+            /* Verkleinde marge aan beide zijden van de elementen */
+        }
+
+        .line5 {
+            display: inline-block;
+            margin: 2px;
+            text-align: center;
+        }
+
+        .line5 .tooltiptext {
+            font: 20px "SUSE", Papyrus, sans-serif;
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+        }
+
+        .line5:hover .tooltiptext {
+            visibility: visible;
+        }
+
+        .line5 {
+            transition: transform .2s;
+        }
+
+        .line5:hover {
+            transform: scale(1.1);
+        }
+
+        .line5 img {
+            width: 120px;
+            height: auto;
+        }
     </style>
 </head>
 
@@ -462,6 +511,32 @@
                     <span class="tooltiptext">Papa's Taco Mia</span>
                 </a>
             </div>
+        </div>
+        <div class="line4">
+            <a href="gangsterbros.html">
+                <img src="gangsterbros.png">
+                <span class="tooltiptext">gangster bros</span>
+            </a>
+        </div>
+        <div class="line4">
+            <a href="rambobros.html">
+                <img src="rambobros.png">
+                <span class="tooltiptext">rambo bros</span>
+            </a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="line5">
+            <a href="planetplatformer.html">
+                <img src="planetplatformer.png">
+                <span class="tooltiptext">planet platformer</span>
+            </a>
+        </div>
+        <div class="line5">
+            <a href="snake.html">
+                <img src="snake.png">
+                <span class="tooltiptext">snake</span>
+            </a>
         </div>
     </div>
 </body>
