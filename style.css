@@ -258,6 +258,7 @@ body {
     background-color: rgba(0, 16, 94, 0.872);
     background-blend-mode: color;
     animation: colorTransition 20s infinite alternate;
+    padding-bottom: 150px;
 }
 
 @keyframes colorTransition {
