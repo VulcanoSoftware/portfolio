@@ -26,12 +26,13 @@
             margin: 5;
             gap: 10px;
             padding-top: 500px;
+            padding-bottom: 800px;
             /* Verkleinde gap tussen elementen */
         }
 
         .container {
             display: flex;
-            gap: 20px;
+            gap: 18px;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
@@ -293,339 +294,400 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            border-radius: 25px;
         }
 
         .icon img {
             max-width: 100%;
             max-height: 100%;
         }
+
+        .home:hover {
+            transform: scale(0.9);
+        }
+
+        .home {
+            transition: transform .2s;
+        }
+
+        body {
+            background-color: rgba(0, 16, 94, 0.872);
+            background-blend-mode: color;
+            animation: colorTransition 20s infinite alternate;
+        }
+
+        @keyframes colorTransition {
+            0% {
+                background-color: rgba(0, 16, 94, 0.872);
+            }
+
+            25% {
+                background-color: rgba(0, 22, 134, 0.872);
+            }
+
+            50% {
+                background-color: rgba(22, 39, 121, 0.872);
+            }
+
+            75% {
+                background-color: rgba(0, 34, 201, 0.872);
+            }
+
+            100% {
+                background-color: rgba(0, 140, 255, 0.872);
+            }
+        }
+
+        .titeldiv {
+            transition-duration: 4s;
+        }
+
+        .titeldiv:hover {
+            background-color: rgb(0, 200, 255);
+            border-radius: 25px;
+        }
+
+        .spellen {
+            border: 5px solid #0057e7;
+            padding: 15px;
+            background-color: #7dbdf0;
+            border-radius: 25px;
+        }
     </style>
 </head>
 
 <body>
-    <a href="../index.html">
-        <img src="home.png" style="width: 50px; height: auto;">
-    </a>
-    <br>
-    <br>
-    <h1 class="titel">VulcanoFlash</h1>
-    <br>
-    <br>
-    <div class="container">
-        <div class="line5">
-            <div class="icon">
-                <a href="hotdog.html">
-                    <img src="hotdog.png">
-                    <span class="tooltiptext">Papa's Hot Doggeria</span>
-                </a>
-            </div>
+    <div class="home">
+        <div class="icon">
+            <a href="../index.html">
+                <img src="home.png" style="width: 100px; height: 100px;">
+            </a>
         </div>
-        <div class="line5">
-            <div class="icon">
-                <a href="burger.html">
-                    <img src="burger.png">
-                    <span class="tooltiptext">Papa's Burgeria</span>
-                </a>
-            </div>
-        </div>
-        <div class="line5">
-            <div class="icon">
-                <a href="cheese.html">
-                    <img src="cheese.png">
-                    <span class="tooltiptext">Papa's Cheeseria</span>
-                </a>
-            </div>
-        </div>
-        <div class="line5">
-            <div class="icon">
-                <a href="cupcake.html">
-                    <img src="cupcake.png">
-                    <span class="tooltiptext">Papa's Cupcakeria</span>
-                </a>
-            </div>
-        </div>
-        <div class="line5">
-            <div class="icon">
-                <a href="freezeria.html">
-                    <img src="freezeria.png">
-                    <span class="tooltiptext">Papa's Freezeria</span>
-                </a>
-            </div>
-        </div>
-        <div class="line5">
-            <div class="icon">
-                <a href="pancake.html">
-                    <img src="pancake.png">
-                    <span class="tooltiptext">Papa's Pancakeria</span>
-                </a>
-            </div>
-        </div>
-        <div class="line5">
-            <div class="icon">
-                <a href="pasta.html">
-                    <img src="pasta.png">
-                    <span class="tooltiptext">Papa's Pastaria</span>
-                </a>
-            </div>
-        </div>
-
     </div>
-    <div class="container">
-        <div class="line2">
-            <div class="icon">
-                <a href="scooperia.html">
-                    <img src="scooperia.png">
-                    <span class="tooltiptext">Papa's Scooperia</span>
-                </a>
-            </div>
-        </div>
-        <div class="line2">
-            <div class="icon">
-                <a href="sushi.html">
-                    <img src="sushi.png">
-                    <span class="tooltiptext">Papa's Sushiria</span>
-                </a>
-            </div>
-        </div>
-        <div class="line2">
-            <div class="icon">
-                <a href="wingeria.html">
-                    <img src="wingeria.png">
-                    <span class="tooltiptext">Papa's Wingeria</span>
-                </a>
-            </div>
-        </div>
-        <div class="line2">
-            <div class="icon">
-                <a href="flappy.html">
-                    <img src="flappy.png">
-                    <span class="tooltiptext">Flappy Bird</span>
-                </a>
-            </div>
-        </div>
-        <div class="line2">
-            <div class="icon">
-                <a href="mariobros.html">
-                    <img src="mariobros.png">
-                    <span class="tooltiptext">Super Mario Bros</span>
-                </a>
-            </div>
-        </div>
-        <div class="line2">
-            <div class="icon">
-                <a href="pacman.html">
-                    <img src="pacman.png">
-                    <span class="tooltiptext">Pac-Man</span>
-                </a>
-            </div>
-        </div>
-        <div class="line2">
-            <div class="icon">
-                <a href="uno.html">
-                    <img src="uno.png">
-                    <span class="tooltiptext">Uno</span>
-                </a>
-            </div>
-        </div>
-
+    <br>
+    <br>
+    <div class="titeldiv">
+        <h1 class="titel">VulcanoFlash</h1>
     </div>
-    <div class="container">
-        <div class="line3">
-            <div class="icon">
-                <a href="candy.html">
-                    <img src="candy.png">
-                    <span class="tooltiptext">Candy Crush</span>
-                </a>
+    <br>
+    <br>
+    <div class="spellen">
+        <div class="container">
+            <div class="line5">
+                <div class="icon">
+                    <a href="hotdog.html">
+                        <img src="hotdog.png">
+                        <span class="tooltiptext">Papa's Hot Doggeria</span>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="line3">
-            <div class="icon">
-                <a href="emerald.html">
-                    <img src="emerald.png">
-                    <span class="tooltiptext">emerald hunt</span>
-                </a>
+            <div class="line5">
+                <div class="icon">
+                    <a href="burger.html">
+                        <img src="burger.png">
+                        <span class="tooltiptext">Papa's Burgeria</span>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="line3">
-            <div class="icon">
-                <a href="geometry.html">
-                    <img src="geometry.png">
-                    <span class="tooltiptext">Geometry Dash</span>
-                </a>
+            <div class="line5">
+                <div class="icon">
+                    <a href="cheese.html">
+                        <img src="cheese.png">
+                        <span class="tooltiptext">Papa's Cheeseria</span>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="line3">
-            <div class="icon">
-                <a href="happyglass.html">
-                    <img src="happyglass.png">
-                    <span class="tooltiptext">Happy Glass</span>
-                </a>
+            <div class="line5">
+                <div class="icon">
+                    <a href="cupcake.html">
+                        <img src="cupcake.png">
+                        <span class="tooltiptext">Papa's Cupcakeria</span>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="line3">
-            <div class="icon">
-                <a href="btd5.html">
-                    <img src="btd5.png">
-                    <span class="tooltiptext">Bloons TD 5</span>
-                </a>
+            <div class="line5">
+                <div class="icon">
+                    <a href="freezeria.html">
+                        <img src="freezeria.png">
+                        <span class="tooltiptext">Papa's Freezeria</span>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="line3">
-            <div class="icon">
-                <a href="tetris.html">
-                    <img src="tetris.png">
-                    <span class="tooltiptext">Tetris</span>
-                </a>
+            <div class="line5">
+                <div class="icon">
+                    <a href="pancake.html">
+                        <img src="pancake.png">
+                        <span class="tooltiptext">Papa's Pancakeria</span>
+                    </a>
+                </div>
             </div>
-        </div>
+            <div class="line5">
+                <div class="icon">
+                    <a href="pasta.html">
+                        <img src="pasta.png">
+                        <span class="tooltiptext">Papa's Pastaria</span>
+                    </a>
+                </div>
+            </div>
 
-        <div class="line3">
-            <div class="icon">
-                <a href="papalouie3.html">
-                    <img src="papalouie3.png">
-                    <span class="tooltiptext">Papa Louie 3</span>
-                </a>
-            </div>
-        </div>
-
-    </div>
-    <div class="container">
-        <div class="line6">
-            <div class="icon">
-                <a href="redball4.html">
-                    <img src="redball4.png">
-                    <span class="tooltiptext">Red Ball 4</span>
-                </a>
-            </div>
-        </div>
-        <div class="line6">
-            <div class="icon">
-                <a href="papalouie.html">
-                    <img src="papalouie.png">
-                    <span class="tooltiptext">Papa Louie</span>
-                </a>
-            </div>
-        </div>
-        <div class="line6">
-            <div class="icon">
-                <a href="papalouie2.html">
-                    <img src="papalouie2.png">
-                    <span class="tooltiptext">Papa Louie 2</span>
-                </a>
-            </div>
-        </div>
-        <div class="line6">
-            <div class="icon">
-                <a href="wheely2.html">
-                    <img src="wheely2.png">
-                    <span class="tooltiptext">wheely 2</span>
-                </a>
-            </div>
-        </div>
-        <div class="line6">
-            <div class="icon">
-                <a href="wheely3.html">
-                    <img src="wheely3.png">
-                    <span class="tooltiptext">wheely 3</span>
-                </a>
-            </div>
-        </div>
-        <div class="line6">
-            <div class="icon">
-                <a href="wheely.html">
-                    <img src="wheely.png">
-                    <span class="tooltiptext">wheely</span>
-                </a>
-            </div>
-        </div>
-        <div class="line6">
-            <div class="icon">
-                <a href="wheely4.html">
-                    <img src="wheely4.png">
-                    <span class="tooltiptext">wheely 4</span>
-                </a>
-            </div>
         </div>
         <div class="container">
-            <div class="line4">
+            <div class="line2">
                 <div class="icon">
-                    <a href="wheely5.html">
-                        <img src="wheely5.png">
-                        <span class="tooltiptext">wheely 5</span>
+                    <a href="scooperia.html">
+                        <img src="scooperia.png">
+                        <span class="tooltiptext">Papa's Scooperia</span>
                     </a>
                 </div>
             </div>
-            <div class="line4">
+            <div class="line2">
                 <div class="icon">
-                    <a href="wheely6.html">
-                        <img src="wheely6.png">
-                        <span class="tooltiptext">wheely 6</span>
+                    <a href="sushi.html">
+                        <img src="sushi.png">
+                        <span class="tooltiptext">Papa's Sushiria</span>
                     </a>
                 </div>
             </div>
-            <div class="line4">
+            <div class="line2">
                 <div class="icon">
-                    <a href="hangman.html">
-                        <img src="hangman.png">
-                        <span class="tooltiptext">hangman</span>
+                    <a href="wingeria.html">
+                        <img src="wingeria.png">
+                        <span class="tooltiptext">Papa's Wingeria</span>
                     </a>
                 </div>
             </div>
-            <div class="line4">
+            <div class="line2">
                 <div class="icon">
-                    <a href="wheely7.html">
-                        <img src="wheely7.png">
-                        <span class="tooltiptext">wheely 7</span>
+                    <a href="flappy.html">
+                        <img src="flappy.png">
+                        <span class="tooltiptext">Flappy Bird</span>
                     </a>
                 </div>
             </div>
-            <div class="line4">
+            <div class="line2">
                 <div class="icon">
-                    <a href="bakeria.html">
-                        <img src="bakeria.png">
-                        <span class="tooltiptext">Papa's Bakeria</span>
+                    <a href="mariobros.html">
+                        <img src="mariobros.png">
+                        <span class="tooltiptext">Super Mario Bros</span>
                     </a>
                 </div>
             </div>
-            <div class="line4">
+            <div class="line2">
                 <div class="icon">
-                    <a href="taco.html">
-                        <img src="taco.png">
-                        <span class="tooltiptext">Papa's Taco Mia</span>
+                    <a href="pacman.html">
+                        <img src="pacman.png">
+                        <span class="tooltiptext">Pac-Man</span>
                     </a>
                 </div>
             </div>
-            <div class="line4">
+            <div class="line2">
                 <div class="icon">
-                    <a href="gangsterbros.html">
-                        <img src="gangsterbros.png">
-                        <span class="tooltiptext">gangster bros</span>
+                    <a href="uno.html">
+                        <img src="uno.png">
+                        <span class="tooltiptext">Uno</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="line3">
+                <div class="icon">
+                    <a href="candy.html">
+                        <img src="candy.png">
+                        <span class="tooltiptext">Candy Crush</span>
+                    </a>
+                </div>
+            </div>
+            <div class="line3">
+                <div class="icon">
+                    <a href="emerald.html">
+                        <img src="emerald.png">
+                        <span class="tooltiptext">emerald hunt</span>
+                    </a>
+                </div>
+            </div>
+            <div class="line3">
+                <div class="icon">
+                    <a href="geometry.html">
+                        <img src="geometry.png">
+                        <span class="tooltiptext">Geometry Dash</span>
+                    </a>
+                </div>
+            </div>
+            <div class="line3">
+                <div class="icon">
+                    <a href="happyglass.html">
+                        <img src="happyglass.png">
+                        <span class="tooltiptext">Happy Glass</span>
+                    </a>
+                </div>
+            </div>
+            <div class="line3">
+                <div class="icon">
+                    <a href="btd5.html">
+                        <img src="btd5.png">
+                        <span class="tooltiptext">Bloons TD 5</span>
+                    </a>
+                </div>
+            </div>
+            <div class="line3">
+                <div class="icon">
+                    <a href="tetris.html">
+                        <img src="tetris.png">
+                        <span class="tooltiptext">Tetris</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="line3">
+                <div class="icon">
+                    <a href="papalouie3.html">
+                        <img src="papalouie3.png">
+                        <span class="tooltiptext">Papa Louie 3</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="line6">
+                <div class="icon">
+                    <a href="redball4.html">
+                        <img src="redball4.png">
+                        <span class="tooltiptext">Red Ball 4</span>
+                    </a>
+                </div>
+            </div>
+            <div class="line6">
+                <div class="icon">
+                    <a href="papalouie.html">
+                        <img src="papalouie.png">
+                        <span class="tooltiptext">Papa Louie</span>
+                    </a>
+                </div>
+            </div>
+            <div class="line6">
+                <div class="icon">
+                    <a href="papalouie2.html">
+                        <img src="papalouie2.png">
+                        <span class="tooltiptext">Papa Louie 2</span>
+                    </a>
+                </div>
+            </div>
+            <div class="line6">
+                <div class="icon">
+                    <a href="wheely2.html">
+                        <img src="wheely2.png">
+                        <span class="tooltiptext">wheely 2</span>
+                    </a>
+                </div>
+            </div>
+            <div class="line6">
+                <div class="icon">
+                    <a href="wheely3.html">
+                        <img src="wheely3.png">
+                        <span class="tooltiptext">wheely 3</span>
+                    </a>
+                </div>
+            </div>
+            <div class="line6">
+                <div class="icon">
+                    <a href="wheely.html">
+                        <img src="wheely.png">
+                        <span class="tooltiptext">wheely</span>
+                    </a>
+                </div>
+            </div>
+            <div class="line6">
+                <div class="icon">
+                    <a href="wheely4.html">
+                        <img src="wheely4.png">
+                        <span class="tooltiptext">wheely 4</span>
                     </a>
                 </div>
             </div>
             <div class="container">
                 <div class="line4">
                     <div class="icon">
-                        <a href="rambobros.html">
-                            <img src="rambobros.png">
-                            <span class="tooltiptext">rambo bros</span>
+                        <a href="wheely5.html">
+                            <img src="wheely5.png">
+                            <span class="tooltiptext">wheely 5</span>
                         </a>
                     </div>
                 </div>
                 <div class="line4">
                     <div class="icon">
-                        <a href="planetplatformer.html">
-                            <img src="planetplatformer.png">
-                            <span class="tooltiptext">planet platformer</span>
+                        <a href="wheely6.html">
+                            <img src="wheely6.png">
+                            <span class="tooltiptext">wheely 6</span>
                         </a>
                     </div>
                 </div>
                 <div class="line4">
                     <div class="icon">
-                        <a href="snake.html">
-                            <img src="snake.png">
-                            <span class="tooltiptext">snake</span>
+                        <a href="hangman.html">
+                            <img src="hangman.png">
+                            <span class="tooltiptext">hangman</span>
                         </a>
+                    </div>
+                </div>
+                <div class="line4">
+                    <div class="icon">
+                        <a href="wheely7.html">
+                            <img src="wheely7.png">
+                            <span class="tooltiptext">wheely 7</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="line4">
+                    <div class="icon">
+                        <a href="bakeria.html">
+                            <img src="bakeria.png">
+                            <span class="tooltiptext">Papa's Bakeria</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="line4">
+                    <div class="icon">
+                        <a href="taco.html">
+                            <img src="taco.png">
+                            <span class="tooltiptext">Papa's Taco Mia</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="line4">
+                    <div class="icon">
+                        <a href="gangsterbros.html">
+                            <img src="gangsterbros.png">
+                            <span class="tooltiptext">gangster bros</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="line4">
+                        <div class="icon">
+                            <a href="rambobros.html">
+                                <img src="rambobros.png">
+                                <span class="tooltiptext">rambo bros</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="line4">
+                        <div class="icon">
+                            <a href="planetplatformer.html">
+                                <img src="planetplatformer.png">
+                                <span class="tooltiptext">planet platformer</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="line4">
+                        <div class="icon">
+                            <a href="snake.html">
+                                <img src="snake.png">
+                                <span class="tooltiptext">snake</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
