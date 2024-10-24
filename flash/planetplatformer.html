@@ -4,10 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>planet platformer</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=SUSE:wght@100..800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
+
+        .home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            border: 5px solid #0057e7;
+            padding: 15px;
+            background-color: #7dbdf0;
+            border-radius: 25px;
+        }
+
+        .homediv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .home:hover {
+            transform: scale(0.9);
+        }
+
+        .home {
+            transition: transform .2s;
+        }
+
         .tut {
+            display: flex;
             text-align: center;
+            justify-content: center;
+        }
+
+        .embed {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .copybtn {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .embed {
+            border: 5px solid #0057e7;
+            padding: 15px;
+            background-color: #7dbdf0;
+            border-radius: 25px;
         }
 
         .btn {
@@ -16,70 +66,142 @@
 
         .hotdog {
             border: 1px solid #000;
-            /* zwart kader */
             padding: 10px;
-            /* ruimte tussen inhoud en kader */
             display: flex;
-            /* gebruik flexbox */
             flex-direction: column;
-            /* items verticaal stapelen */
             align-items: center;
-            /* items horizontaal centreren */
             justify-content: center;
-            /* items verticaal centreren */
             height: 100%;
-            /* zorg ervoor dat de div een hoogte heeft */
         }
 
-        /* Voeg stijl toe voor de textarea */
         #copy {
             width: 100%;
-            /* breedte op 100% instellen */
             height: auto;
-            /* hoogte automatisch */
             overflow: hidden;
-            /* verberg scrollbars */
             resize: none;
-            /* voorkom dat de gebruiker de grootte kan wijzigen */
+        }
+
+
+        .hotdog {
+            border: 5px solid #0057e7;
+            padding: 15px;
+            background-color: #7dbdf0;
+            border-radius: 25px;
+        }
+
+        .copybtn {
+            background-color: rgba(113, 242, 221, 0.774);
+            border-radius: 5px;
+        }
+
+        .buttons {
+            background-color: #03a045;
+            color: black;
+            border: 2px solid #03a045;
+        }
+
+        .buttons:hover {
+            background-color: rgb(0, 255, 191);
+            color: black;
+            transform: scale(0.9);
+        }
+
+
+        .buttons {
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            font: bolder 30px "Handjet", Papyrus, sans-serif;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 1000px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            background-color: rgba(0, 16, 94, 0.872);
+            background-blend-mode: color;
+            animation: colorTransition 20s infinite alternate;
+        }
+
+        @keyframes colorTransition {
+            0% {
+                background-color: rgba(0, 16, 94, 0.872);
+            }
+
+            25% {
+                background-color: rgba(0, 22, 134, 0.872);
+            }
+
+            50% {
+                background-color: rgba(22, 39, 121, 0.872);
+            }
+
+            75% {
+                background-color: rgba(0, 34, 201, 0.872);
+            }
+
+            100% {
+                background-color: rgba(0, 140, 255, 0.872);
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <a href="index.html">
-        <img src="home.png" style="width: 50px; height: auto;">
-    </a>
+    <div class="homediv">
+        <div class="home">
+            <a href="index.html">
+                <img src="home.png" style="width: 100px; height: 100px;">
+            </a>
+        </div>
+    </div>
     <br>
     <br>
-    <iframe src="https://flash.fsh.plus/" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+    <div class="embed">
+        <iframe src="https://flash.fsh.plus/" width="90%" height="500" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="hotdog">
-
-        <textarea id="copy" readonly
+        <br>
+        <br>
+        <br>
+        <textarea class="copybtn" id="copy" readonly
             oninput="autoResize(this)">https://github.com/VulcanoSoftware/swf/raw/refs/heads/main/planetplatformer.swf</textarea>
         <br>
-        <button onclick="copyText()">Kopieer tekst</button>
+        <button class="buttons" onclick="copyText()">Kopieer tekst</button>
 
         <script>
             function copyText() {
-                // Selecteer de tekst in het textarea
                 var copyText = document.getElementById("copy");
                 copyText.select();
-                copyText.setSelectionRange(0, 99999); // Voor mobiele apparaten
+                copyText.setSelectionRange(0, 99999);
 
-                // Kopieer de geselecteerde tekst naar het klembord
                 document.execCommand("copy");
 
-                // Optioneel: Geef een melding dat de tekst is gekopieerd
                 alert("Tekst gekopieerd: " + copyText.value);
             }
 
             function autoResize(textarea) {
-                textarea.style.height = 'auto'; // Reset de hoogte
-                textarea.style.height = textarea.scrollHeight + 'px'; // Stel de hoogte in op basis van de inhoud
+                textarea.style.height = 'auto';
+                textarea.style.height = textarea.scrollHeight + 'px';
             }
 
-            // Initialiseer de hoogte bij het laden van de pagina
             window.onload = function () {
                 autoResize(document.getElementById('copy'));
             }
@@ -89,7 +211,7 @@
     <br>
     <div class="tut">
         <a href="tutorial.pdf" target="_blank" class="btn">
-            <button>how to start a game</button>
+            <button class="buttons">how to start a game</button>
         </a>
     </div>
     <br>
