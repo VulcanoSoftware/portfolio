@@ -79,6 +79,12 @@
             }
         }
     </style>
+    <script>
+        console.log(navigator.userAgent)
+        if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android/i)) {
+            window.location.href = "index_mobile.html";
+        }
+    </script>
 </head>
 
 <body>
