@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Person Shooter In Real Life 5</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=SUSE:wght@100..800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
+
+        .home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            border: 5px solid #0057e7;
+            padding: 15px;
+            background-color: #7dbdf0;
+            border-radius: 25px;
+        }
+
+        .homediv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .home:hover {
+            transform: scale(0.9);
+        }
+
+        .home {
+            transition: transform .2s;
+        }
+
+        .tut {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .embed {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .copybtn {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .embed {
+            border: 5px solid #0057e7;
+            padding: 15px;
+            background-color: #7dbdf0;
+            border-radius: 25px;
+        }
+
+        .btn {
+            position: absolute;
+        }
+
+        .hotdog {
+            border: 1px solid #000;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        #copy {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            resize: none;
+        }
+
+
+        .hotdog {
+            border: 5px solid #0057e7;
+            padding: 15px;
+            background-color: #7dbdf0;
+            border-radius: 25px;
+        }
+
+        .copybtn {
+            background-color: rgba(113, 242, 221, 0.774);
+            border-radius: 5px;
+        }
+
+        .buttons {
+            background-color: #03a045;
+            color: black;
+            border: 2px solid #03a045;
+        }
+
+        .buttons:hover {
+            background-color: rgb(0, 255, 191);
+            color: black;
+            transform: scale(0.9);
+        }
+
+
+        .buttons {
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            font: bolder 30px "Handjet", Papyrus, sans-serif;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 1000px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            background-color: rgba(0, 16, 94, 0.872);
+            background-blend-mode: color;
+            animation: colorTransition 20s infinite alternate;
+        }
+
+        @keyframes colorTransition {
+            0% {
+                background-color: rgba(0, 16, 94, 0.872);
+            }
+
+            25% {
+                background-color: rgba(0, 22, 134, 0.872);
+            }
+
+            50% {
+                background-color: rgba(22, 39, 121, 0.872);
+            }
+
+            75% {
+                background-color: rgba(0, 34, 201, 0.872);
+            }
+
+            100% {
+                background-color: rgba(0, 140, 255, 0.872);
+            }
+        }
+    </style>
+    <script>
+        console.log(navigator.userAgent)
+        if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android/i)) {
+            window.location.href = "index_mobile.html";
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="homediv">
+        <div class="home">
+            <a href="index.html">
+                <img src="home.png" style="width: 100px; height: 100px;">
+            </a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="embed">
+        <iframe src="https://flash.fsh.plus/" width="90%" height="500" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="hotdog">
+        <br>
+        <br>
+        <br>
+        <textarea class="copybtn" id="copy" readonly
+            oninput="autoResize(this)">https://github.com/VulcanoSoftware/swf/raw/refs/heads/main/First%20Person%20Shooter%20in%20Real%20Life%205.swf</textarea>
+        <br>
+        <button class="buttons" onclick="copyText()">copy text</button>
+
+        <script>
+            function copyText() {
+                var copyText = document.getElementById("copy");
+                copyText.select();
+                copyText.setSelectionRange(0, 99999);
+
+                document.execCommand("copy");
+
+                alert("text copied: " + copyText.value);
+            }
+
+            function autoResize(textarea) {
+                textarea.style.height = 'auto';
+                textarea.style.height = textarea.scrollHeight + 'px';
+            }
+
+            window.onload = function () {
+                autoResize(document.getElementById('copy'));
+            }
+        </script>
+    </div>
+    <br>
+    <br>
+    <div class="tut">
+        <a href="tutorial.pdf" target="_blank" class="btn">
+            <button class="buttons">tutorial</button>
+        </a>
+    </div>
+    <br>
+    <br>
+
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob The Robber 5</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=SUSE:wght@100..800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
+
+        .home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            border: 5px solid #0057e7;
+            padding: 15px;
+            background-color: #7dbdf0;
+            border-radius: 25px;
+        }
+
+        .homediv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .home:hover {
+            transform: scale(0.9);
+        }
+
+        .home {
+            transition: transform .2s;
+        }
+
+        .embed {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .embed {
+            border: 5px solid #0057e7;
+            padding: 15px;
+            background-color: #7dbdf0;
+            border-radius: 25px;
+        }
+
+        body {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            background-color: rgba(0, 16, 94, 0.872);
+            background-blend-mode: color;
+            animation: colorTransition 20s infinite alternate;
+        }
+
+        @keyframes colorTransition {
+            0% {
+                background-color: rgba(0, 16, 94, 0.872);
+            }
+
+            25% {
+                background-color: rgba(0, 22, 134, 0.872);
+            }
+
+            50% {
+                background-color: rgba(22, 39, 121, 0.872);
+            }
+
+            75% {
+                background-color: rgba(0, 34, 201, 0.872);
+            }
+
+            100% {
+                background-color: rgba(0, 140, 255, 0.872);
+            }
+        }
+    </style>
+    <script>
+        console.log(navigator.userAgent)
+        if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android/i)) {
+            window.location.href = "index_mobile.html";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="homediv">
+        <div class="home">
+            <a href="index.html">
+                <img src="home.png" style="width: 100px; height: auto;">
+            </a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="embed">
+        <iframe src="https://html5.gamedistribution.com/rvvASMiM/2b89b70d201b443991360f2ba5622c17/index.html?gd_sdk_referrer_url=https%3A%2F%2Fwww.minigiochi.com%2Fgioco%2Fbob-the-robber-5-temple-adventure&mp_api_as3_url=https%3A%2F%2Fssl.minijuegosgratis.com%2Flechuck%2Fas3%2Flatest.swf&mp_api_as3_url_bck=https%3A%2F%2Fapi.minijuegos.com%2Flechuck%2Fclient-as%2F&mp_api_id=2589&mp_api_js_url=https%3A%2F%2Fssl.minijuegosgratis.com%2Flechuck%2Fjs%2Flatest.js&mp_api_js_url_bck=https%3A%2F%2Fapi.minijuegos.com%2Flechuck%2Fclient-js%2F&mp_assets=https%3A%2F%2Fs2.minijuegosgratis.com%2F&mp_embed=0&mp_game_id=225826&mp_game_uid=bob-the-robber-5-temple-adventure&mp_game_url=https%3A%2F%2Fwww.minigiochi.com%2Fembed%2Fbob-the-robber-5-temple-adventure&mp_int=1&mp_locale=it_IT&mp_player_type=IFRAME&mp_site_https_url=https%3A%2F%2Fwww.minigiochi.com%2F&mp_site_name=minigiochi.com&mp_site_url=https%3A%2F%2Fwww.minigiochi.com%2F&mp_timezone=Europe%2FBrussels&mp_view_type=&mini_signature=195592e8250abec05bd04c30b795913c&xdm_e=https%3A%2F%2Fwww.minigiochi.com&xdm_c=default637&xdm_p=1&gd_zone_config=eyJwYXJlbnRVUkwiOiJodHRwczovL3d3dy5taW5pZ2lvY2hpLmNvbS9naW9jby9ib2ItdGhlLXJvYmJlci01LXRlbXBsZS1hZHZlbnR1cmUiLCJwYXJlbnREb21haW4iOiJtaW5pZ2lvY2hpLmNvbSIsInRvcERvbWFpbiI6Im1pbmlnaW9jaGkuY29tIiwiaGFzSW1wcmVzc2lvbiI6ZmFsc2UsImxvYWRlckVuYWJsZWQiOnRydWUsImhvc3QiOiJodG1sNS5nYW1lZGlzdHJpYnV0aW9uLmNvbSIsInZlcnNpb24iOiIxLjUuMTcifQ%253D%253D" width="90%" height="500" frameborder="0"
+            allowfullscreen></iframe>
+    </div>
+
+</body>
+
+</html>

@@ -190,7 +190,7 @@
         <textarea class="copybtn" id="copy" readonly
             oninput="autoResize(this)">https://github.com/VulcanoSoftware/swf/raw/refs/heads/main/papalouie3.swf</textarea>
         <br>
-        <button class="buttons" onclick="copyText()">Kopieer tekst</button>
+        <button class="buttons" onclick="copyText()">copy text</button>
 
         <script>
             function copyText() {
@@ -200,7 +200,7 @@
 
                 document.execCommand("copy");
 
-                alert("Tekst gekopieerd: " + copyText.value);
+                alert("text copied: " + copyText.value);
             }
 
             function autoResize(textarea) {
@@ -217,7 +217,7 @@
     <br>
     <div class="tut">
         <a href="tutorial.pdf" target="_blank" class="btn">
-            <button class="buttons">how to start a game</button>
+            <button class="buttons">tutorial</button>
         </a>
     </div>
     <br>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob The Robber 4</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=SUSE:wght@100..800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
+
+        .home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            border: 5px solid #0057e7;
+            padding: 15px;
+            background-color: #7dbdf0;
+            border-radius: 25px;
+        }
+
+        .homediv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .home:hover {
+            transform: scale(0.9);
+        }
+
+        .home {
+            transition: transform .2s;
+        }
+
+        .embed {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .embed {
+            border: 5px solid #0057e7;
+            padding: 15px;
+            background-color: #7dbdf0;
+            border-radius: 25px;
+        }
+
+        body {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            background-color: rgba(0, 16, 94, 0.872);
+            background-blend-mode: color;
+            animation: colorTransition 20s infinite alternate;
+        }
+
+        @keyframes colorTransition {
+            0% {
+                background-color: rgba(0, 16, 94, 0.872);
+            }
+
+            25% {
+                background-color: rgba(0, 22, 134, 0.872);
+            }
+
+            50% {
+                background-color: rgba(22, 39, 121, 0.872);
+            }
+
+            75% {
+                background-color: rgba(0, 34, 201, 0.872);
+            }
+
+            100% {
+                background-color: rgba(0, 140, 255, 0.872);
+            }
+        }
+    </style>
+    <script>
+        console.log(navigator.userAgent)
+        if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android/i)) {
+            window.location.href = "index_mobile.html";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="homediv">
+        <div class="home">
+            <a href="index.html">
+                <img src="home.png" style="width: 100px; height: auto;">
+            </a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="embed">
+        <iframe src="http://html5.gamedistribution.com/rvvASMiM/f7f522cafad845d68fcddadbcb581087/index.html" height="600" width="100%" scrolling="no" frameborder="0"
+            allowfullscreen></iframe>
+    </div>
+
+</body>
+
+</html>
