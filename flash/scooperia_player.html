@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Fsh flash</title>
+  <meta name="description" content="Fsh flash, a online flash player.">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#a89c9b">
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+  <script>
+    // Make player fit screen
+    function fitScreen() {
+      let nav = document.getElementById("navbar").getBoundingClientRect();
+      window.player.width = window.innerWidth;
+      window.player.height = window.innerHeight - nav.height;
+    }
+    // Create the ruffle player
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.RufflePlayer.config = {
+      autoplay: "on",
+      unmuteOverlay: "hidden",
+      letterbox: "on",
+      openUrlMode: "confirm",
+      scale: "showAll",
+      background: "#181818"
+    };
+    // On load set up ruffle
+    window.addEventListener("load", (event) => {
+      // Adding player
+      const ruffle = window.RufflePlayer.newest();
+      const player = ruffle.createPlayer();
+      const container = document.getElementById("container");
+      container.appendChild(player);
+      // Making public
+      window.player = player;
+      // Adding extra functions smh
+      if (!window.player.volumeControls) window.player.volumeControls = document.querySelector("#container > ruffle-player").shadowRoot.querySelector("#volume-controls-modal");
+      if (!window.player.openVolumeControls) window.player.openVolumeControls = function () { window.player.volumeControls.classList.remove('hidden') };
+      if (!window.player.closeVolumeControls) window.player.closeVolumeControls = function () { window.player.volumeControls.classList.add('hidden') };
+      window.player.toggleVolumeControls = function () {
+        window.player.volumeControls.classList.value.includes('hidden') ? window.player.openVolumeControls() : window.player.closeVolumeControls();
+      }
+      // Force dark mode and our colors
+      let style = window.player.shadowRoot.querySelector('style');
+      style.innerHTML = style.innerHTML.replace('border:1px solid gray;', 'border-radius:12px;');
+      style.innerHTML = style.innerHTML.replace('#context-menu{', '#context-menu{overflow:hidden;');
+      style.innerHTML = style.innerHTML.replace('#context-menu .menu-item{', '#context-menu .menu-item{transition:padding 500ms;');
+      style.innerHTML = style.innerHTML.replace('#context-menu .menu-item:not(.disabled):hover{', '#context-menu .menu-item:not(.disabled):hover{padding:5px 10px 5px 14px;');
+      // Add resie event listener and size player
+      window.addEventListener('resize', fitScreen);
+      fitScreen()
+    });
+
+    // When file dropped
+    function dropHandler(ev) {
+      ev.stopPropagation();
+      ev.preventDefault();
+      document.getElementById('style').innerHTML = ``;
+
+      if (ev.dataTransfer.items) {
+        for (let i = 0; i < ev.dataTransfer.items.length; i++) {
+          if (ev.dataTransfer.items[i].kind === "file") {
+            const file = ev.dataTransfer.items[i].getAsFile();
+            if (file.type != 'application/x-shockwave-flash') {
+              alert('File must be shockwave flash')
+              return;
+            }
+            window.player.load(URL.createObjectURL(file));
+            document.getElementById('container').focus();
+            fitScreen()
+          }
+        };
+      } else {
+        ev.dataTransfer.files.forEach((file, i) => {
+          window.player.load(URL.createObjectURL(file));
+          document.getElementById('container').focus();
+          fitScreen()
+        });
+      }
+    }
+
+    // When file dragged over screen
+    function dragOverHandler(ev) {
+      ev.stopPropagation();
+      ev.preventDefault();
+      document.getElementById('selection').close();
+      document.getElementById('style').innerHTML = `#sub {
+    display:block !important;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    border-radius: 1rem;
+    background-color: #224;
+    text-align: center;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 9999999;
+  }`;
+    }
+    // When dragged file leaves
+    function dragLeaveHandler(ev) {
+      ev.stopPropagation();
+      ev.preventDefault();
+      document.getElementById('style').innerHTML = ``;
+    }
+    // Pre process files
+    function fileHandle(ev) {
+      document.getElementById('selection').close();
+      ob = {
+        stopPropagation: function () { },
+        preventDefault: function () { },
+        dataTransfer: {
+          files: Array.from(ev.target.files)
+        }
+      };
+      dropHandler(ob)
+    }
+    // URL
+    function urlHandle(url) {
+      document.getElementById('selection').close();
+      fetch('https://api.fsh.plus/file?url=' + encodeURIComponent(url))
+        .then(res => res.arrayBuffer())
+        .then(res => {
+          let file = new File([res], "file.swf");
+          ob = {
+            stopPropagation: function () { },
+            preventDefault: function () { },
+            dataTransfer: {
+              files: Array.from([file])
+            }
+          };
+          dropHandler(ob)
+        })
+    }
+    let searchParams = new URLSearchParams(location.search);
+    window.addEventListener("DOMContentLoaded", () => {
+      if (searchParams.has('url')) {
+        urlHandle(searchParams.get('url'));
+      }
+    });
+
+  </script>
+  <style>
+    /* -- Vars -- */
+    :root {
+      --bg-0: #0c0c0c;
+      --bg-1: #181818;
+      --bg-2: #252525;
+      --bg-3: #333333;
+      --bg-4: #595959;
+
+      --text-0: #ffffff;
+      --text-1: #dddddd;
+      --text-2: #bbbbbb;
+      --text-3: #888888;
+
+      --black-1: #666;
+      --black-2: #222;
+
+      --white-1: #ddd;
+      --white-2: #bbb;
+
+      --red-1: #d66;
+      --red-2: #b22;
+
+      --yellow-1: #dd6;
+      --yellow-2: #bb2;
+
+      --green-1: #6d6;
+      --green-2: #2b2;
+
+      --aqua-1: #6dd;
+      --aqua-2: #4bb;
+
+      --blue-1: #66d;
+      --blue-2: #22b;
+
+      --purple-1: #d6d;
+      --purple-2: #b2b;
+
+      /* Not for use */
+      --accent-1: #38bdf8;
+      /*Tailwind: sky 400*/
+      --accent-2: #0ea5e9;
+      /*Tailwind: sky 500*/
+    }
+
+    /* -- Fonts -- */
+    @font-face {
+      font-family: 'Lexend';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(./Lexend.ttf) format('ttf');
+    }
+
+    /* -- General styling -- */
+    body {
+      min-height: 100vh;
+      transition: 500ms;
+      overflow: hidden;
+      color: var(--text-1);
+      background-color: var(--bg-1);
+      font-family: 'Lexend', 'Arial';
+      margin: 0px;
+      padding: 0px;
+      caret-color: transparent;
+    }
+
+    h1,
+    h2,
+    p {
+      margin: 2px;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-bottom: 2px;
+      margin-top: 1em;
+    }
+
+    img {
+      -webkit-user-drag: none;
+      user-select: none;
+      -ms-user-select: none;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+    }
+
+    svg {
+      fill: var(--text-1);
+      stroke: var(--text-1);
+      transition: 500ms;
+    }
+
+    summary {
+      cursor: pointer;
+    }
+
+    ul,
+    ol {
+      margin: 0px;
+      padding-left: 25px;
+    }
+
+    li {
+      margin: 2px;
+    }
+
+    @media (prefers-reduced-motion) {
+      * {
+        transition: none !important;
+      }
+    }
+
+    /* -- Dialogs -- */
+    dialog {
+      padding: 10px;
+      color: var(--text-1);
+      border-radius: 1rem;
+      background-color: var(--bg-1);
+      border: 2px var(--text-1) solid;
+    }
+
+    ::backdrop {
+      backdrop-filter: blur(2px);
+    }
+
+    /* -- Scrollbar -- */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-1);
+    }
+
+    ::-webkit-scrollbar-corner {
+      background: var(--bg-1);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: var(--text-3);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: var(--bg-3);
+    }
+
+    /* -- Fsh ownership title -- */
+    .title {
+      font-size: 250%;
+      margin-top: -15px;
+      color: var(--text-0);
+      text-decoration: hidden;
+    }
+
+    a:has(.title) {
+      text-decoration: none;
+      display: block;
+      width: fit-content;
+      margin-inline: auto;
+    }
+
+    .title h1 {
+      margin: 0px;
+      font-weight: normal;
+      margin-top: -12px;
+    }
+
+    /* -- Links -- */
+    a {
+      cursor: pointer;
+      color: var(--aqua-1);
+      transition: color 250ms ease;
+    }
+
+    a:hover {
+      color: var(--aqua-2);
+    }
+
+    /* -- Inputs -- */
+    button {
+      cursor: pointer;
+      padding: 5px;
+      outline: none;
+      font-weight: bold;
+      font-size: 80%;
+      transition: 500ms;
+      color: var(--text-1);
+      border-radius: 0.5rem;
+      border: 2px var(--text-1) solid;
+      background-color: transparent;
+    }
+
+    button[disabled] {
+      cursor: not-allowed;
+      color: var(--text-2);
+      border: 2px var(--text-2) solid;
+    }
+
+    button:not([disabled]):hover {
+      color: var(--bg-1);
+      background-color: var(--text-1);
+    }
+
+    button:not([disabled]):hover svg {
+      fill: var(--bg-1);
+      stroke: var(--bg-1);
+    }
+
+    input:not([type=range]),
+    textarea,
+    select {
+      margin: 5px;
+      padding: 5px;
+      outline: none;
+      font-weight: bold;
+      caret-color: auto;
+      color: var(--text-1);
+      border-radius: 0.75rem;
+      border: 2px var(--text-1) solid;
+      background-color: transparent;
+    }
+
+    input[type=color] {
+      padding: 0;
+    }
+
+    input[type=file]::file-selector-button {
+      outline: none;
+      font-weight: bold;
+      caret-color: auto;
+      color: var(--text-1);
+      border-radius: 0.25rem;
+      border: 2px var(--text-1) solid;
+      background-color: transparent;
+    }
+
+    option {
+      background-color: var(--bg-1);
+    }
+
+    option:disabled {
+      background-color: var(--bg-0);
+    }
+
+    button:focus-within,
+    input:focus-within,
+    textarea:focus-within,
+    select:focus-within {
+      outline: 1px solid var(--text-0);
+    }
+
+    /* -- Navbar and Player -- */
+    RufflePlayer,
+    ruffle-player {
+      display: block;
+      width: 100vw;
+      height: calc(100vh - 21px);
+      --splash-screen-background: var(--bg-1);
+    }
+
+    #navbar {
+      display: flex;
+      align-items: center;
+    }
+
+    .link {
+      display: flex;
+      height: 21px;
+      align-items: center;
+      color: var(--text-1);
+      text-decoration: none;
+    }
+
+    .keep {
+      margin: 0;
+      padding: 0px 4px;
+    }
+
+    #sub {
+      display: none;
+    }
+
+    input[type="file"] {
+      margin: 0;
+      padding: 0px 5px;
+      border-radius: 0.5rem;
+    }
+
+    input[type="file"]::file-selector-button {
+      border: none;
+      padding: 0;
+    }
+
+    #urlswf {
+      width: 80%;
+      box-sizing: border-box;
+    }
+
+    .up {
+      text-align: center;
+      flex: 1;
+    }
+
+    .opts {
+      display: flex;
+      align-items: center;
+    }
+
+    .opts p {
+      margin: 0;
+    }
+
+    .opts button {
+      padding: 0px 4px;
+      border-radius: 0;
+      border: none;
+    }
+
+    /* Force dark mode and our colors */
+    * {
+      --modal-background: var(--bg-2) !important;
+      --modal-foreground-rgb: 221, 221, 221 !important;
+      --modal-foreground-filter: invert(90%) !important;
+    }
+  </style>
+  <style id="style">
+
+  </style>
+</head>
+
+<body ondrop="dropHandler(event)" ondragover="dragOverHandler(event)" ondragleave="dragLeaveHandler(event)">
+  <div id="sub">Drop swf file anywhere to view</div>
+  <dialog id="selection">
+    <p>Drag and drop a file</p>
+    <hr>
+    <input type="file" accept=".swf" onchange="fileHandle(event)">
+    <hr>
+    <input type="url" id="urlswf" onchange="if(!this.value.includes('://')){this.value='https://'+this.value}">
+    <button onclick="urlHandle(document.getElementById('urlswf').value)">Get</button>
+  </dialog>
+  <div id="navbar">
+    <label class="up">Drop a file or <button class="keep"
+        onclick="document.getElementById('selection').showModal()">Select one</button></label>
+        <button class="keep" onclick="urlHandle('https://github.com/VulcanoSoftware/swf/raw/refs/heads/main/scooperia.swf')" style="margin-right: 250px;">start current game</button>
+
+    <label class="opts">
+      <p>Actions:</p>
+      <button onclick="window.player.enterFullscreen()" aria-label="fullscreen"><svg width="15" height="15"
+          viewbox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M160 5C160 2.23858 162.239 0 165 0H251C253.761 0 256 2.23858 256 5V91C256 93.7614 253.761 96 251 96H213C210.239 96 208 93.7614 208 91V53C208 50.2386 205.761 48 203 48H165C162.239 48 160 45.7614 160 43V5Z">
+          </path>
+          <path
+            d="M0 5C0 2.23857 2.23858 0 5 0H91C93.7614 0 96 2.23858 96 5V43C96 45.7614 93.7614 48 91 48H53C50.2386 48 48 50.2386 48 53V91C48 93.7614 45.7614 96 43 96H5C2.23858 96 0 93.7614 0 91V5Z">
+          </path>
+          <path
+            d="M203 208C205.761 208 208 205.761 208 203V165C208 162.239 210.239 160 213 160H251C253.761 160 256 162.239 256 165V251C256 253.761 253.761 256 251 256H165C162.239 256 160 253.761 160 251V213C160 210.239 162.239 208 165 208H203Z">
+          </path>
+          <path
+            d="M0 165C0 162.239 2.23858 160 5 160H43C45.7614 160 48 162.239 48 165V203C48 205.761 50.2386 208 53 208H91C93.7614 208 96 210.239 96 213V251C96 253.761 93.7614 256 91 256H5C2.23857 256 0 253.761 0 251V165Z">
+          </path>
+        </svg></button>
+      <button onclick="window.player.pause()" aria-label="pause"><svg height="18" viewbox="0 0 256 256"
+          xmlns="http://www.w3.org/2000/svg">
+          <rect x="43" y="28" width="50" height="200" rx="10"></rect>
+          <rect x="163" y="28" width="50" height="200" rx="10"></rect>
+        </svg></button>
+      <button onclick="window.player.toggleVolumeControls()" aria-label="volume controls"><i
+          class="fa-solid fa-volume-high"></i></button>
+    </label>
+  </div>
+  <ruffleplayer id="container"></ruffleplayer>
+  <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'8ded2d9bca62758c',t:'MTczMDk4MDk4Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>

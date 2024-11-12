@@ -175,54 +175,10 @@
     <br>
     <br>
     <div class="embed">
-        <iframe src="https://flash.fsh.plus/" width="90%" height="500" frameborder="0" allowfullscreen></iframe>
+        <iframe src="cheese_player.html" width="90%" height="500" frameborder="0" allowfullscreen></iframe>
     </div>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="hotdog">
-        <br>
-        <br>
-        <br>
-        <textarea class="copybtn" id="copy" readonly
-            oninput="autoResize(this)">https://github.com/VulcanoSoftware/swf/raw/refs/heads/main/cheese.swf</textarea>
-        <br>
-        <button class="buttons" onclick="copyText()">copy text</button>
-
-        <script>
-            function copyText() {
-                var copyText = document.getElementById("copy");
-                copyText.select();
-                copyText.setSelectionRange(0, 99999);
-
-                document.execCommand("copy");
-
-                alert("text copied: " + copyText.value);
-            }
-
-            function autoResize(textarea) {
-                textarea.style.height = 'auto';
-                textarea.style.height = textarea.scrollHeight + 'px';
-            }
-
-            window.onload = function () {
-                autoResize(document.getElementById('copy'));
-            }
-        </script>
-    </div>
-    <br>
-    <br>
-    <div class="tut">
-        <a href="tutorial.pdf" target="_blank" class="btn">
-            <button class="buttons">tutorial</button>
-        </a>
-    </div>
-    <br>
-    <br>
-
 </body>
 
 </html>
