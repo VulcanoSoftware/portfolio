@@ -6,6 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        let skills = [
+            { skill: 'html', level: 85, tags: ["programmeren", "front-end"] },
+            { skill: 'css', level: 75, tags: ["programmeren", "front-end"] },
+            { skill: 'javascript', level: 55, tags: ["programmeren", "front-end"] },
+            { skill: 'python', level: 80, tags: ["programmeren", "back-end"] }
+        ];
+
+        window.addEventListener('load', () => {
+            let skillValue = {
+                python: skills[3].level,
+                javascript: skills[2].level,
+                html: skills[0].level,
+                css: skills[1].level
+            }
+
+            let pythonBar = document.getElementById("pythonBar");
+            let htmlBar = document.getElementById("htmlBar");
+            let cssBar = document.getElementById("cssBar");
+            let javascriptBar = document.getElementById("javascriptBar");
+
+            pythonBar.style.width = skillValue.python + "%";
+            pythonBar.setAttribute("value", skillValue.python);
+            htmlBar.style.width = skillValue.html + "%";
+            htmlBar.setAttribute("value", skillValue.html);
+            cssBar.style.width = skillValue.css + "%";
+            cssBar.setAttribute("value", skillValue.css);
+            javascriptBar.style.width = skillValue.javascript + "%";
+            javascriptBar.setAttribute("value", skillValue.javascript);
+        })
+
+        function buildSkillHtml(skill) {
+            return `<div class='skill'>
+                        <div class='skill-title'>
+                            ${skill.skill}
+                        </div>
+                        <div class="tags"
+                            ${printTags(skill)}
+                        </div>
+                        <div class="skill-level">
+                            ${skill.level}
+                        </div>
+                    </div>`
+        }
+
+        function printTags(skill) {
+            let tagsHTML = '';
+
+            skill.tags.forEach(tag => {
+                tagsHTML += `<span class="tag">${tag}</span>`
+            });
+
+            return tagsHTML;
+        }
+    </script>
 </head>
 
 <body>
@@ -239,29 +294,31 @@
             <h2 class="lijn10" id="skills">Skills</h2>
             <p class="lijn11">How good I am at certain programming languages</p>
         </div>
+
         <div class="prog1">
             <div class="progress">
-                <div class="bar1" value="80" max="100" style="width: 80%">Python</div>
+                <div class="bar1" id="pythonBar" max="100">Python</div>
             </div>
         </div>
         <div class="prog2">
             <div class="progress2">
-                <div class="bar2" value="70" max="100" style="width: 85%">html</div>
+                <div class="bar2" id="htmlBar" max="100">html</div>
             </div>
         </div>
         <div class="prog3">
             <div class="progress3">
-                <div class="bar3" value="40" max="100" style="width: 70%">css</div>
+                <div class="bar3" id="cssBar" max="100">css</div>
             </div>
         </div>
         <div class="prog4">
             <div class="progress4">
-                <div class="bar4" value="10" max="100" style="width: 40%">JavaScript</div>
+                <div class="bar4" id="javascriptBar" max="100">JavaScript</div>
             </div>
         </div>
+
         <br>
         <div class="interestingbuttons">
-            <a href="https://i.mythicalkitten.com/dream_face_reveal.mp4">
+            <a href="https://i.mythicalkitten.com/dream_face_reveal.mp4" class="interestingbuttona">
                 <button class="interestingbutton">a very insteresting button</button>
             </a>
         </div>
@@ -270,7 +327,7 @@
         <br>
         <br>
         <div class="interestingbuttons">
-            <a href="flash/index.html">
+            <a href="flash/index.html" class="interestingbuttona">
                 <button class="interestingbutton">play a game?</button>
             </a>
         </div>

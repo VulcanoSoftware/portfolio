@@ -1418,7 +1418,7 @@ body {
 
 
 
-@media only screen and ((min-width: 600px)(max-width: 1000px)) {
+@media only screen and ((min-width: 600px) and (max-width: 1000px)) {
     .project1 {
         width: fit-content;
         height: 300px;
@@ -1533,5 +1533,14 @@ body {
         gap: 10px;
     }
 
+    .navigatie .buttons {
+        color: black; 
+    }
+    
 
+
+}
+
+.interestingbuttona {
+    text-decoration: none;
 }
