@@ -26,9 +26,76 @@
             let htmlBar = document.getElementById("htmlBar");
             let cssBar = document.getElementById("cssBar");
             let javascriptBar = document.getElementById("javascriptBar");
+            let intStarted = false;
 
-            pythonBar.style.width = skillValue.python + "%";
-            pythonBar.setAttribute("value", skillValue.python);
+            let BarsY = pythonBar.offsetTop - 570;
+
+            if (window.pageYOffset > BarsY) {
+                if (!intStarted) {
+                    setIntervalBar(skillValue.python, pythonBar);
+                    setIntervalBar(skillValue.html, htmlBar);
+                    setIntervalBar(skillValue.css, cssBar);
+                    setIntervalBar(skillValue.javascript, javascriptBar);
+                    intStarted = true;
+                }
+            }
+
+
+
+
+            document.addEventListener('scroll', () => {
+                if (window.pageYOffset > BarsY) {
+                    if (!intStarted) {
+                        setIntervalBar(skillValue.python, pythonBar);
+                        setIntervalBar(skillValue.html, htmlBar);
+                        setIntervalBar(skillValue.css, cssBar);
+                        setIntervalBar(skillValue.javascript, javascriptBar);
+                        intStarted = true;
+                    }
+                }
+            })
+
+
+            function setIntervalBar(val, el) {
+
+                let startVal = 0;
+                //settings
+                let step = 0.17;
+                let speed = 10;
+
+                let barInt = setInterval(function () {
+
+                    console.log('el', el)
+                    console.log('startVal', startVal)
+                    console.log('val', val)
+                    startVal += step;
+                    if (startVal <= val) {
+                        el.style.width = startVal + "%";
+                    } else {
+                        console.log('bi', barInt)
+                        clearInterval(barInt);
+                    }
+
+                }, speed);
+            }
+
+            /*async function updateBargetal(value) {
+                for (let i = 0; i < value; i++) {
+                    await new Promise(resolve => setTimeout(() => {
+                        pythonBarGetal += 1;
+                        resolve();
+                    }, 100));
+
+                    console.log(bargetal);
+                    pythonBar.style.width = pythonBarGetal + "%";
+                    pythonBar.setAttribute("value", pythonBarGetal);
+                }
+            }*/
+
+
+
+
+
             htmlBar.style.width = skillValue.html + "%";
             htmlBar.setAttribute("value", skillValue.html);
             cssBar.style.width = skillValue.css + "%";
@@ -60,6 +127,8 @@
 
             return tagsHTML;
         }
+
+
     </script>
 </head>
 
@@ -92,14 +161,14 @@
         <!--github link-->
         <div class="github">
             <a href="https://github.com/VulcanoSoftware">
-                <img src="github.png" alt="github" style="width:100px;height:100px;">
+                <img src="github.webp" alt="github" style="width:100px;height:100px;">
                 <span class="tooltiptext">Github</span>
             </a>
         </div>
         <!--discord link-->
         <div class="discord">
-            <a href="https://discord.gg/sn3Tn7nPcH">
-                <img src="discord.png" alt="discord" style="width:100px;height:100px;">
+            <a href="https://discord.gg/bsbAr9Zdjg">
+                <img src="discord.webp" alt="discord" style="width:100px;height:100px;">
                 <span class="tooltiptext">Discord</span>
             </a>
         </div>
@@ -107,7 +176,7 @@
     <main>
         <div class="alinea1">
             <h1 class="lijn1">Hello, I am VulcanoCraft</h1>
-            <p class="lijn2">A full stack developer based in Belgium. <img src="belgium.gif" alt="belgium"
+            <p class="lijn2">A full stack developer based in Belgium. <img src="belgium.webp" alt="belgium"
                     style="width:30px;height:30px;">
                 <br>
                 Working on various projects, ranging from small websites to desktop applications.
@@ -123,8 +192,8 @@
         <div class="proj1">
             <div class="project1">
                 <p class="lijn5">
-                    <img src="pickaxe.gif" alt="pickaxe" style="width:80px;height:80px;"><img src="dirt.gif" alt="dirt"
-                        style="width:50px;height:50px;">
+                    <img src="pickaxe.webp" alt="pickaxe" style="width:80px;height:80px;"><img src="dirt.webp"
+                        alt="dirt" style="width:50px;height:50px;">
                     <br>
                     <b>VulcanoCraft</b>
                     <br>
@@ -200,91 +269,91 @@
         <!--tech stack afbeeldingen-->
         <div class="techsdiv">
             <div class="aternos">
-                <img src="aternos.png" alt="aternos" style="width:100px;height:100px;" class="techs">
+                <img src="aternos.webp" alt="aternos" style="width:100px;height:100px;" class="techs">
                 <span class="tooltiptext">aternos</span>
             </div>
             <div class="cloudflare">
-                <img src="cloudflare.png" alt="cloudflare" style="width:100px;height:100px;" class="techs">
+                <img src="cloudflare.webp" alt="cloudflare" style="width:100px;height:100px;" class="techs">
                 <span class="tooltiptext">Cloudflare</span>
             </div>
             <div class="css">
-                <img src="css.png" alt="css" style="width:100px;height:100px;" class="techs">
+                <img src="css.webp" alt="css" style="width:100px;height:100px;" class="techs">
                 <span class="tooltiptext">CSS</span>
             </div>
             <div class="flask">
-                <img src="flask.png" alt="flask" style="width:100px;height:100px;" class="techs">
+                <img src="flask.webp" alt="flask" style="width:100px;height:100px;" class="techs">
                 <span class="tooltiptext">Flask</span>
             </div>
             <div class="freenom">
-                <img src="freenom.png" alt="freenom" style="width:100px;height:100px;" class="techs">
+                <img src="freenom.webp" alt="freenom" style="width:100px;height:100px;" class="techs">
                 <span class="tooltiptext">Freenom</span>
             </div>
             <div class="github">
-                <img src="github.png" alt="github" style="width:100px;height:100px;" class="techs">
+                <img src="github.webp" alt="github" style="width:100px;height:100px;" class="techs">
                 <span class="tooltiptext">Github</span>
             </div>
             <div class="gsites">
-                <img src="gsites.png" alt="google sites" style="width:100px;height:100px;" class="techs">
+                <img src="gsites.webp" alt="google sites" style="width:100px;height:100px;" class="techs">
                 <span class="tooltiptext">Google Sites</span>
             </div>
             <div class="html">
-                <img src="html.png" alt="html" style="width:100px;height:100px;" class="techs">
+                <img src="html.webp" alt="html" style="width:100px;height:100px;" class="techs">
                 <span class="tooltiptext">HTML</span>
             </div>
             <div class="lubuntu">
-                <img src="lubuntu.png" alt="lubuntu" style="width:100px;height:100px;" class="techs">
+                <img src="lubuntu.webp" alt="lubuntu" style="width:100px;height:100px;" class="techs">
                 <span class="tooltiptext">lubuntu</span>
             </div>
             <div class="lxmint">
-                <img src="lxmint.png" alt="linux mint" style="width:100px;height:100px;" class="techs">
+                <img src="lxmint.webp" alt="linux mint" style="width:100px;height:100px;" class="techs">
                 <span class="tooltiptext">linux mint</span>
             </div>
             <div class="pterodactyl">
-                <img src="pterodactyl.png" alt="pterodactyl" style="width:100px;height:100px;" class="techs">
+                <img src="pterodactyl.webp" alt="pterodactyl" style="width:100px;height:100px;" class="techs">
                 <span class="tooltiptext">pterodactyl</span>
             </div>
             <div class="pycharm">
-                <img src="pycharm.png" alt="pycharm" style="width:100px;height:100px;" class="techs">
+                <img src="pycharm.webp" alt="pycharm" style="width:100px;height:100px;" class="techs">
                 <span class="tooltiptext">pycharm</span>
             </div>
             <div class="python">
-                <img src="python.png" alt="python" style="width:100px;height:100px;" class="techs">
+                <img src="python.webp" alt="python" style="width:100px;height:100px;" class="techs">
                 <span class="tooltiptext">Python</span>
             </div>
             <div class="replit">
-                <img src="replit.png" alt="replit" style="width:100px;height:100px;" class="techs">
+                <img src="replit.webp" alt="replit" style="width:100px;height:100px;" class="techs">
                 <span class="tooltiptext">replit</span>
             </div>
             <div class="rpi">
-                <img src="rpi.png" alt="rpi" style="width:100px;height:100px;" class="techs">
+                <img src="rpi.webp" alt="rpi" style="width:100px;height:100px;" class="techs">
                 <span class="tooltiptext">raspberry pi</span>
             </div>
             <div class="ubuntu">
-                <img src="ubuntu.png" alt="ubuntu" style="width:100px;height:100px;" class="techs">
+                <img src="ubuntu.webp" alt="ubuntu" style="width:100px;height:100px;" class="techs">
                 <span class="tooltiptext">ubuntu</span>
             </div>
             <div class="virtualbox">
-                <img src="virtualbox.png" alt="virtualbox" style="width:100px;height:100px;" class="techs">
+                <img src="virtualbox.webp" alt="virtualbox" style="width:100px;height:100px;" class="techs">
                 <span class="tooltiptext">virtualbox</span>
             </div>
             <div class="vscode">
-                <img src="vscode.png" alt="visual studio code" style="width:100px;height:100px;" class="techs">
+                <img src="vscode.webp" alt="visual studio code" style="width:100px;height:100px;" class="techs">
                 <span class="tooltiptext">visual studio code</span>
             </div>
             <div class="winxp">
-                <img src="winxp.png" alt="windows xp" style="width:100px;height:100px;" class="techs">
+                <img src="winxp.webp" alt="windows xp" style="width:100px;height:100px;" class="techs">
                 <span class="tooltiptext">windows XP</span>
             </div>
             <div class="win7">
-                <img src="win7.png" alt="windows 7" style="width:100px;height:100px;" class="techs">
+                <img src="win7.webp" alt="windows 7" style="width:100px;height:100px;" class="techs">
                 <span class="tooltiptext">windows 7</span>
             </div>
             <div class="win10">
-                <img src="win10.png" alt="windows 10" style="width:100px;height:100px;" class="techs">
+                <img src="win10.webp" alt="windows 10" style="width:100px;height:100px;" class="techs">
                 <span class="tooltiptext">windows 10</span>
             </div>
             <div class="wix">
-                <img src="wix.png" alt="wix" style="width:100px;height:100px;" class="techs">
+                <img src="wix.webp" alt="wix" style="width:100px;height:100px;" class="techs">
                 <span class="tooltiptext">wix</span>
             </div>
         </div>

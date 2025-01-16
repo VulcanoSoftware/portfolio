@@ -213,7 +213,7 @@
 .progress {
     box-sizing: content-box;
     height: 20px;
-    position: relative;
+    /*position: relative;*/
     margin: 60px 0 20px 0;
     background: #555;
     border-radius: 25px;
@@ -224,7 +224,7 @@
 .progress2 {
     box-sizing: content-box;
     height: 20px;
-    position: relative;
+    /*position: relative;*/
     margin: 60px 0 20px 0;
     background: #555;
     border-radius: 25px;
@@ -235,7 +235,7 @@
 .progress3 {
     box-sizing: content-box;
     height: 20px;
-    position: relative;
+    /*position: relative;*/
     margin: 60px 0 20px 0;
     background: #555;
     border-radius: 25px;
@@ -246,7 +246,7 @@
 .progress4 {
     box-sizing: content-box;
     height: 20px;
-    position: relative;
+    /*position: relative;*/
     margin: 60px 0 20px 0;
     background: #555;
     border-radius: 25px;
@@ -1183,7 +1183,7 @@ body {
 
 .boven {
     border: 30px solid transparent;
-    border-image: url(xpborder.png) 30 round;
+    border-image: url(xpborder.webp) 30 round;
     height: fit-content;
     padding: auto;
     margin: auto;
@@ -1356,7 +1356,7 @@ body {
 
     .boven {
         border: 30px solid transparent;
-        border-image: url(xpborder.png) 30 round;
+        border-image: url(xpborder.webp) 30 round;
         width: fit-content;
         height: fit-content;
         padding: auto;
@@ -1475,7 +1475,7 @@ body {
 
     .boven {
         border: 30px solid transparent;
-        border-image: url(xpborder.png) 30 round;
+        border-image: url(xpborder.webp) 30 round;
         width: fit-content;
         height: fit-content;
         padding: auto;
