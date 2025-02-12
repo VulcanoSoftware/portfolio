@@ -103,6 +103,33 @@
             cssBar.setAttribute("value", skillValue.css);
             javascriptBar.style.width = skillValue.javascript + "%";
             javascriptBar.setAttribute("value", skillValue.javascript);
+
+            // Hamburger menu functionaliteit
+            const hamburger = document.querySelector('.hamburger-menu');
+            const menuIcon = document.getElementById('menuIcon');
+            
+            menuIcon.addEventListener('click', () => {
+                menuIcon.classList.add('animate');
+                
+                setTimeout(() => {
+                    if (menuIcon.src.includes('burger-bar.png')) {
+                        menuIcon.src = 'close.png';
+                        hamburger.classList.add('active');
+                    } else {
+                        menuIcon.src = 'burger-bar.png';
+                        hamburger.classList.remove('active');
+                    }
+                    menuIcon.classList.remove('animate');
+                }, 150);
+            });
+            
+            // Sluit menu alleen wanneer op de sluitknop wordt geklikt
+            document.querySelectorAll('.menu-items a').forEach(link => {
+                link.addEventListener('click', () => {
+                    // Menu blijft open na het klikken op een link
+                    // Verwijder deze event listener als je wilt dat het menu open blijft
+                });
+            });
         })
 
         function buildSkillHtml(skill) {
@@ -385,35 +412,19 @@
                 <div class="bar4" id="javascriptBar" max="100">JavaScript</div>
             </div>
         </div>
-
-        <br>
-        <div class="interestingbuttons">
-            <a href="https://i.mythicalkitten.com/dream_face_reveal.mp4" class="interestingbuttona">
-                <button class="interestingbutton">a very insteresting button</button>
-            </a>
+        <div class="hamburger-menu">
+            <div class="hamburger">
+                <img src="burger-bar.png" id="menuIcon" alt="menu icon">
+            </div>
+            <div class="menu-items">
+                <a href="#projects">projects</a>
+                <a href="#experiences">experience</a>
+                <a href="#techstack">tech stack</a>
+                <a href="#skills">skills</a>
+                <a href="vulcanoclient/index.html">VulcanoClient</a>
+                <a href="flash/index.html">play a game</a>
+            </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="interestingbuttons">
-            <a href="flash/index.html" class="interestingbuttona">
-                <button class="interestingbutton">play a game?</button>
-            </a>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="interestingbuttons">
-            <a href="vulcanoclient/index.html" class="interestingbuttona">
-                <button class="interestingbutton">VulcanoClient</button>
-            </a>
-        </div>
-        <br>
-        <br>
     </main>
 
 

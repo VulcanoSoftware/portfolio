@@ -1266,39 +1266,6 @@ body {
     gap: 150px;
 }
 
-.interestingbutton {
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    display: block;
-    margin: auto;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 1000px;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font: bolder 20px "Handjet", Papyrus, sans-serif;
-}
-
-
-
-
-.interestingbutton {
-    background-color: #03a045;
-    color: black;
-    border: 2px solid #03a045;
-}
-
-.interestingbutton:hover {
-    background-color: rgb(0, 255, 191);
-    color: black;
-    transform: scale(0.9);
-}
-
 @media only screen and (max-width: 1000px) {
     .project1 {
         width: fit-content;
@@ -1543,4 +1510,182 @@ body {
 
 .interestingbuttona {
     text-decoration: none;
+}
+
+.hamburger-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.hamburger {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1001;
+    background: rgb(0, 51, 255);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.3s ease;
+}
+
+.hamburger span {
+    color: white;
+    font: bolder 20px "Handjet", Papyrus, sans-serif;
+    text-align: center;
+}
+
+.menu-items {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: rgb(0, 51, 255);
+    padding-top: 60px;
+    transition: left 0.3s ease;
+}
+
+.menu-items a {
+    display: block;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    font: bolder 20px "Handjet", Papyrus, sans-serif;
+}
+
+.menu-items a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.hamburger-menu.active .menu-items {
+    left: 0;
+}
+
+.hamburger-menu.active .hamburger span:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.active .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .hamburger span:last-child {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.hamburger-menu.active .hamburger {
+    left: 270px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .hamburger-menu {
+        display: block;
+    }
+    
+    .navigatie {
+        display: none;
+    }
+}
+
+/* Mobiele aanpassingen */
+@media only screen and (max-width: 600px) {
+    .navigatie {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+        background-color: rgb(0, 51, 255);
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+        z-index: 999;
+        box-sizing: border-box;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    .buttons1, .buttons2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        margin: 5px 0;
+        flex-wrap: wrap;
+        padding: 0 5px;
+        box-sizing: border-box;
+    }
+
+    .buttons {
+        background-color: #03a045;
+        color: black;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 1000px; /* Aangepast naar dezelfde border-radius als desktop */
+        font-size: 16px;
+        margin: 2px;
+        white-space: nowrap;
+        width: 120px;
+        height: 40px;
+        flex: none;
+    }
+
+    body {
+        padding-top: 120px;
+        margin: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+}
+
+/* Tablet aanpassingen */
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+    .navigatie {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 8px;
+        display: flex !important;
+        justify-content: center;
+        gap: 15px;
+        z-index: 999;
+    }
+
+    body {
+        padding-top: 60px;
+    }
+}
+
+/* Zorg ervoor dat de desktop versie ongewijzigd blijft */
+@media only screen and (min-width: 1001px) {
+    /* Hier komen geen nieuwe stijlen, zodat de bestaande desktop stijlen behouden blijven */
+}
+
+#menuIcon {
+    transition: all 1s ease;
+    width: 70px;
+    height: 70px;
+}
+
+#menuIcon:hover {
+    cursor: pointer;
+}
+
+.animate {
+    transform: rotate(180deg) scale(0.8);
+    opacity: 0.5;
 }
