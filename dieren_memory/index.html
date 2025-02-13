@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Dieren memory</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        console.log(navigator.userAgent)
+        if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android/i)) {
+            window.location.href = "index_mobile.html";
+        }
+    </script>
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <h1>Dieren memory</h1>
+    <div class="score">Score: <span id="score">0</span></div>
+    <div class="score">Wins: <span id="wins">0</span></div>
+    <div id="gewonnen" class="gewonnen"><mark>Gewonnen !</mark></div>
+    <div id="verloren" class="gewonnen"><mark>Verloren !</mark></div>
+    <div id="timertitel">Timer</div>
+    <div class="timerdiv">
+        <div id="resterendetijd">Resterende tijd:</div>
+        <div id="timer" class="timer"></div>
+    </div>
+    <div class="memory-game">
+        <div class="memory-card" data-card="1">
+            <img class="front" src="images/dog.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+        <div class="memory-card" data-card="1">
+            <img class="front" src="images/dog.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+        <div class="memory-card" data-card="2">
+            <img class="front" src="images/cat.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+        <div class="memory-card" data-card="2">
+            <img class="front" src="images/cat.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+        <div class="memory-card" data-card="3">
+            <img class="front" src="images/konijn.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+        <div class="memory-card" data-card="3">
+            <img class="front" src="images/konijn.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+        <div class="memory-card" data-card="4">
+            <img class="front" src="images/kip.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+        <div class="memory-card" data-card="4">
+            <img class="front" src="images/kip.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+        <div class="memory-card" data-card="5">
+            <img class="front" src="images/paard.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+        <div class="memory-card" data-card="5">
+            <img class="front" src="images/paard.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+        <div class="memory-card" data-card="6">
+            <img class="front" src="images/turtle.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+        <div class="memory-card" data-card="6">
+            <img class="front" src="images/turtle.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+        <div class="memory-card" data-card="7">
+            <img class="front" src="images/leeuw.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+        <div class="memory-card" data-card="7">
+            <img class="front" src="images/leeuw.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+        <div class="memory-card" data-card="8">
+            <img class="front" src="images/koe.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+        <div class="memory-card" data-card="8">
+            <img class="front" src="images/koe.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+        <div class="memory-card" data-card="9">
+            <img class="front" src="images/varken.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+        <div class="memory-card" data-card="9">
+            <img class="front" src="images/varken.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+        <div class="memory-card" data-card="10">
+            <img class="front" src="images/schaap.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+        <div class="memory-card" data-card="10">
+            <img class="front" src="images/schaap.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+        <div class="memory-card" data-card="11">
+            <img class="front" src="images/parrot.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+        <div class="memory-card" data-card="11">
+            <img class="front" src="images/parrot.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+        <div class="memory-card" data-card="12">
+            <img class="front" src="images/ezel.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+        <div class="memory-card" data-card="12">
+            <img class="front" src="images/ezel.png">
+            <img class="back" src="images/vraagteken.png">
+        </div>
+    </div>
+    <button id="playagain" class="playagain">Play again</button>
+</body>
+</html>

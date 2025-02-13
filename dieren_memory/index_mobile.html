@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VulcanoFlash</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=SUSE:wght@100..800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Handjet:wght@100..900&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Handjet:wght@100..900&family=Knewave&family=Press+Start+2P&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Handjet:wght@100..900&family=Knewave&family=Press+Start+2P&family=Rubik+Glitch&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Exo:ital,wght@0,100..900;1,100..900&family=Handjet:wght@100..900&family=Knewave&family=Press+Start+2P&family=Rubik+Glitch&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=DynaPuff:wght@400..700&family=Exo:ital,wght@0,100..900;1,100..900&family=Handjet:wght@100..900&family=Knewave&family=Press+Start+2P&family=Rubik+Glitch&family=Rubik+Marker+Hatch&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=DynaPuff:wght@400..700&family=Exo:ital,wght@0,100..900;1,100..900&family=Handjet:wght@100..900&family=Knewave&family=Press+Start+2P&family=Rubik+Glitch&family=Rubik+Marker+Hatch&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+        .mobile {
+            font: bolder 25px "SUSE", Papyrus, sans-serif;
+            text-align: center;
+            text-shadow: 2px 2px;
+        }
+
+        .main {
+            border: 5px solid #0057e7;
+            padding: 15px;
+            background-color: #7dbdf0;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .img {
+            display: block;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        body {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        body {
+            background-color: rgba(0, 16, 94, 0.872);
+            background-blend-mode: color;
+            animation: colorTransition 20s infinite alternate;
+        }
+
+        @keyframes colorTransition {
+            0% {
+                background-color: rgba(0, 16, 94, 0.872);
+            }
+
+            25% {
+                background-color: rgba(0, 22, 134, 0.872);
+            }
+
+            50% {
+                background-color: rgba(22, 39, 121, 0.872);
+            }
+
+            75% {
+                background-color: rgba(0, 34, 201, 0.872);
+            }
+
+            100% {
+                background-color: rgba(0, 140, 255, 0.872);
+            }
+        }
+    </style>
+    <script>
+        console.log(navigator.userAgent)
+        if (!(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android/i))) {
+            window.location.href = "index.html";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="mobile">
+            <h1>This page is incompatible with mobile devices.</h1>
+            <h2>Use your computer instead</h2>
+        </div>
+        <div class="img">
+            <img src="compatible.webp">
+        </div>
+    </div>
+</body>
+
+</html>

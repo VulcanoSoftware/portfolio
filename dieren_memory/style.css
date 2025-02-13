@@ -1,0 +1,141 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: lightskyblue;
+}
+
+.memory-game {
+    display: grid;
+    grid-template-columns: repeat(8, 120px);
+    gap: 10px;
+    margin: 40px;
+    margin-bottom: 80px;
+}
+
+.memory-card {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.memory-card.flipped {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.front {
+    transform: rotateY(180deg);
+}
+
+.front img, .back img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.score {
+    font-size: 24px;
+    margin: 10px;
+}
+
+.gewonnen {
+    font-size: 24px;
+    margin: 10px;
+}
+
+.playagain {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    display: block;
+    margin: auto;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1000px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font: bolder 20px Arial, sans-serif;
+    margin-bottom: 80px;
+}
+
+.playagain {
+    background-color: #03a045;
+    color: black;
+    border: 2px solid #03a045;
+}
+
+.playagain:hover {
+    background-color: rgb(0, 255, 191);
+    color: black;
+    transform: scale(0.9);
+}
+
+.timerdiv {
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 5px;
+    margin-left: 200px;
+    margin-top: 50px;
+    position: absolute;
+    left: 0px;
+    width: 110px;
+    height: 110px;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+}
+
+#resterendetijd {
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+#timertitel {
+    color: white;
+    border-radius: 25px;
+    margin-left: 200px;
+    margin-top: 10px;
+    position: absolute;
+    left: 0px;
+    width: 119.5px;
+    height: 45px;
+    padding: 10px;
+    text-align: center;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: 0px;
+    font-weight: bold;
+    background-color: black;
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    .memory-game {
+        display: grid;
+        grid-template-columns: repeat(3, 120px);
+        gap: 10px;
+        margin: 20px;
+    }
+}

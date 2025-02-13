@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function timer() {
+            let now = parseInt(new Date().getTime());
+            let countdowntime = parseInt(now + 82 * 1000);
+
+            const interval = setInterval(() => {
+                let timenow = parseInt(new Date().getTime());
+                let distance = countdowntime - timenow;
+                let printdistance = Math.floor(distance / 1000);
+
+                let minuten = Math.floor(printdistance / 60);
+                let seconden = printdistance % 60;
+    
+                console.log(minuten, " minuten ", seconden, " seconden");
+                
+                if (minuten == 0 && seconden == 0) {
+                    clearInterval(interval);
+                    console.log("kaboem")
+                }
+            }, 1000);
+        }
+        window.addEventListener('load', () => {
+            myFunction()
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
