@@ -32,6 +32,11 @@ nav {
     color: #ff6b6b;
 }
 
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
 nav ul {
     display: flex;
     list-style: none;
