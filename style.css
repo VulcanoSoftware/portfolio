@@ -1,15 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=SUSE:wght@100..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Handjet:wght@100..900&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Handjet:wght@100..900&family=Knewave&family=Press+Start+2P&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Handjet:wght@100..900&family=Knewave&family=Press+Start+2P&family=Rubik+Glitch&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Exo:ital,wght@0,100..900;1,100..900&family=Handjet:wght@100..900&family=Knewave&family=Press+Start+2P&family=Rubik+Glitch&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=DynaPuff:wght@400..700&family=Exo:ital,wght@0,100..900;1,100..900&family=Handjet:wght@100..900&family=Knewave&family=Press+Start+2P&family=Rubik+Glitch&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=DynaPuff:wght@400..700&family=Exo:ital,wght@0,100..900;1,100..900&family=Handjet:wght@100..900&family=Knewave&family=Press+Start+2P&family=Rubik+Glitch&family=Rubik+Marker+Hatch&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&family=Handjet:wght@100..900&family=Press+Start+2P&family=Carter+One&display=swap');
 
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
 
+body {
+    background-color: rgba(0, 16, 94, 0.872);
+    background-blend-mode: color;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-end;
+}
 
 .clock-text {
     font: bold 20px Papyrus, sans-serif;
@@ -21,7 +35,7 @@
     width: 100%;
     background-color: green;
     height: 20px;
-    border-radius: 50px;
+    border-radius: 20px;
     font: bold 20px "Handjet", Papyrus, sans-serif;
     text-align: center;
     animation: progress 1500ms ease-in 1;
@@ -31,7 +45,7 @@
     width: 100%;
     background-color: rgb(255, 0, 0);
     height: 20px;
-    border-radius: 50px;
+    border-radius: 20px;
     font: bold 20px "Handjet", Papyrus, sans-serif;
     text-align: center;
 }
@@ -40,7 +54,7 @@
     width: 100%;
     background-color: rgb(0, 47, 255);
     height: 20px;
-    border-radius: 50px;
+    border-radius: 20px;
     font: bold 20px "Handjet", Papyrus, sans-serif;
     text-align: center;
 }
@@ -49,12 +63,10 @@
     width: 100%;
     background-color: rgb(221, 255, 0);
     height: 20px;
-    border-radius: 50px;
+    border-radius: 20px;
     font: bold 20px "Handjet", Papyrus, sans-serif;
     text-align: center;
 }
-
-
 
 .lijn1 {
     font: bolder 55px "SUSE", Papyrus, sans-serif;
@@ -82,8 +94,17 @@
     font-style: oblique;
 }
 
+.project1, .project2, [class^="xp"], .techsdiv, .progcontainer1, .progcontainer2, .prog, .clock, .navigatie, .hamburger, .menu-items {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
 .project1 {
-    width: fit-content;
+    width: 100%;
+    max-width: 800px;
     height: 150px;
     padding: 30px;
     border: 5px solid rgb(0, 4, 255);
@@ -93,20 +114,29 @@
     border-radius: 25px;
 }
 
-.lijn5 {
-    font: 15px "Press Start 2P", Papyrus, sans-serif;
-}
-
 .project2 {
     font: 15px "Press Start 2P", Papyrus, sans-serif;
-    width: fit-content;
-    height: 70px;
-    padding: 30px;
+    width: 100%;
+    max-width: 800px;
+    min-height: 70px;
+    height: auto;
+    padding: 40px;
     border: 5px solid rgb(0, 4, 255);
     margin: auto;
+    margin-bottom: 60px;
     text-align: center;
     background-color: rgba(26, 110, 255, 0.667);
     border-radius: 25px;
+}
+
+.project2 .grote-tekst{font-size:24px;font-family:"Press Start 2P",Papyrus,sans-serif}
+
+.project2 .grotere-tekst {
+    font-size: 28px;
+    font-family: "Press Start 2P", Papyrus, sans-serif;
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
 }
 
 .lijn6 {
@@ -157,12 +187,88 @@
     border-radius: 25px;
 }
 
-.boven {
-    width: 330px;
-    height: 100px;
+.xp4 {
+    font: 15px "Press Start 2P", Papyrus, sans-serif;
+    width: 500px;
+    height: 50px;
+    padding: 30px;
+    border: 5px solid rgb(0, 4, 255);
     margin: auto;
     text-align: center;
-    background-color: white;
+    background-color: rgba(26, 110, 255, 0.667);
+    border-radius: 25px;
+}
+
+[class^="xp"] {
+    font: 15px "Press Start 2P", Papyrus, sans-serif;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    min-height: 50px;
+    padding: 40px;
+    border: 5px solid rgb(0, 4, 255);
+    margin: auto;
+    margin-bottom: 60px;
+    text-align: center;
+    background-color: rgba(26, 110, 255, 0.667);
+    border-radius: 25px;
+}
+
+.foot {
+    width: 330px;
+    height: 20px;
+    margin: auto;
+    text-align: center;
+    transition: transform .2s;
+}
+
+.foot:hover {
+    transform: scale(1.1);
+}
+
+.icons-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+    width: auto;
+    position: absolute;
+    right: 50px;
+    bottom: 20px;
+}
+
+.icon-wrapper {
+    position: relative;
+    display: inline-block;
+    transition: transform .2s;
+}
+
+.icon-wrapper:hover {
+    transform: scale(1.1);
+}
+
+.github-icon, .discord-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.icon-wrapper .tooltiptext {
+    font: 20px "SUSE", Papyrus, sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.icon-wrapper:hover .tooltiptext {
+    visibility: visible;
 }
 
 .lijn8 {
@@ -180,7 +286,7 @@
 .techs {
     width: fit-content;
     height: 50px;
-    padding: 20px;
+    padding: 10px;
     border: 5px solid rgb(0, 4, 255);
     margin: auto;
     text-align: center;
@@ -188,14 +294,17 @@
 }
 
 .techsdiv {
-    width: fit-content;
+    width: 100%;
+    max-width: 90%;
     height: auto;
-    padding: 5px;
+    padding: 25px;
     border: 5px solid rgb(0, 4, 255);
     margin: auto;
+    margin-bottom: 70px;
     text-align: center;
     background-color: rgba(26, 110, 255, 0.667);
     border-radius: 25px;
+    position: relative;
 }
 
 .lijn10 {
@@ -210,85 +319,51 @@
     font-style: oblique;
 }
 
+.progcontainer1, .progcontainer2 {
+    display: flex;
+    flex-direction: row; 
+    gap: 70px;
+    align-items: center; 
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    transition: transform .2s;
+    width: 100%;
+    max-width: 100%;
+}
+
+.progcontainer1:hover, .progcontainer2:hover {
+    transform: scale(0.9);
+}
+
 .progress {
     box-sizing: content-box;
     height: 20px;
-    /*position: relative;*/
     margin: 60px 0 20px 0;
     background: #555;
     border-radius: 25px;
     padding: 10px;
     box-shadow: inset 0 -1px 1px rgba(30, 255, 0, 0.3);
+    overflow: hidden;
 }
 
-.progress2 {
-    box-sizing: content-box;
-    height: 20px;
-    /*position: relative;*/
-    margin: 60px 0 20px 0;
-    background: #555;
-    border-radius: 25px;
-    padding: 10px;
-    box-shadow: inset 0 -1px 1px rgba(30, 255, 0, 0.3);
+[id$="Bar"] {
+    border-radius: 20px !important;
+    min-width: 30px; 
 }
 
-.progress3 {
-    box-sizing: content-box;
-    height: 20px;
-    /*position: relative;*/
-    margin: 60px 0 20px 0;
-    background: #555;
-    border-radius: 25px;
-    padding: 10px;
-    box-shadow: inset 0 -1px 1px rgba(30, 255, 0, 0.3);
-}
-
-.progress4 {
-    box-sizing: content-box;
-    height: 20px;
-    /*position: relative;*/
-    margin: 60px 0 20px 0;
-    background: #555;
-    border-radius: 25px;
-    padding: 10px;
-    box-shadow: inset 0 -1px 1px rgba(30, 255, 0, 0.3);
-}
-
-body {
-    background-color: rgba(0, 16, 94, 0.872);
-    background-blend-mode: color;
-    animation: colorTransition 20s infinite alternate;
-    padding-bottom: 150px;
-}
-
-@keyframes colorTransition {
-    0% {
-        background-color: rgba(0, 16, 94, 0.872);
-    }
-
-    25% {
-        background-color: rgba(0, 22, 134, 0.872);
-    }
-
-    50% {
-        background-color: rgba(22, 39, 121, 0.872);
-    }
-
-    75% {
-        background-color: rgba(0, 34, 201, 0.872);
-    }
-
-    100% {
-        background-color: rgba(0, 140, 255, 0.872);
-    }
-}
-
-.github {
+.techicon, .html {
     position: relative;
     display: inline-block;
+    transition: transform .2s;
+    margin: 5px;
 }
 
-.github .tooltiptext {
+.techicon:hover, .html:hover {
+    transform: scale(1.1);
+}
+
+.techicon .tooltiptext, .html .tooltiptext {
     font: 20px "SUSE", Papyrus, sans-serif;
     visibility: hidden;
     width: 120px;
@@ -304,919 +379,97 @@ body {
     margin-left: -60px;
 }
 
-.github:hover .tooltiptext {
-    visibility: visible;
-}
-
-.discord {
-    position: relative;
-    display: inline-block;
-}
-
-.discord .tooltiptext {
-    font: 20px "SUSE", Papyrus, sans-serif;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.discord:hover .tooltiptext {
+.techicon:hover .tooltiptext, .html:hover .tooltiptext {
     visibility: visible;
 }
 
 .clock {
     pointer-events: none;
     width: 180px;
+    max-width: 100%;
     height: auto;
     padding: 5px;
     border: 5px solid rgb(0, 4, 255);
-    margin: auto;
     text-align: center;
     background-color: rgba(26, 110, 255, 0.667);
     border-radius: 25px;
     display: flex;
     align-items: center;
-}
-
-.aternos {
-    position: relative;
-    display: inline-block;
-}
-
-.aternos .tooltiptext {
-    font: 20px "SUSE", Papyrus, sans-serif;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.aternos:hover .tooltiptext {
-    visibility: visible;
-}
-
-.cloudflare {
-    position: relative;
-    display: inline-block;
-}
-
-.cloudflare .tooltiptext {
-    font: 20px "SUSE", Papyrus, sans-serif;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.cloudflare:hover .tooltiptext {
-    visibility: visible;
-}
-
-.css {
-    position: relative;
-    display: inline-block;
-}
-
-.css .tooltiptext {
-    font: 20px "SUSE", Papyrus, sans-serif;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.css:hover .tooltiptext {
-    visibility: visible;
-}
-
-.flask {
-    position: relative;
-    display: inline-block;
-}
-
-.flask .tooltiptext {
-    font: 20px "SUSE", Papyrus, sans-serif;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.flask:hover .tooltiptext {
-    visibility: visible;
-}
-
-.freenom {
-    position: relative;
-    display: inline-block;
-}
-
-.freenom .tooltiptext {
-    font: 20px "SUSE", Papyrus, sans-serif;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.freenom:hover .tooltiptext {
-    visibility: visible;
-}
-
-.gsites {
-    position: relative;
-    display: inline-block;
-}
-
-.gsites .tooltiptext {
-    font: 20px "SUSE", Papyrus, sans-serif;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.gsites:hover .tooltiptext {
-    visibility: visible;
-}
-
-.html {
-    position: relative;
-    display: inline-block;
-}
-
-.html .tooltiptext {
-    font: 20px "SUSE", Papyrus, sans-serif;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.html:hover .tooltiptext {
-    visibility: visible;
-}
-
-.lubuntu {
-    position: relative;
-    display: inline-block;
-}
-
-.lubuntu .tooltiptext {
-    font: 20px "SUSE", Papyrus, sans-serif;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.lubuntu:hover .tooltiptext {
-    visibility: visible;
-}
-
-.lxmint {
-    position: relative;
-    display: inline-block;
-}
-
-.lxmint .tooltiptext {
-    font: 20px "SUSE", Papyrus, sans-serif;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.lxmint:hover .tooltiptext {
-    visibility: visible;
-}
-
-.pterodactyl {
-    position: relative;
-    display: inline-block;
-}
-
-.pterodactyl .tooltiptext {
-    font: 20px "SUSE", Papyrus, sans-serif;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.pterodactyl:hover .tooltiptext {
-    visibility: visible;
-}
-
-.pycharm {
-    position: relative;
-    display: inline-block;
-}
-
-.pycharm .tooltiptext {
-    font: 20px "SUSE", Papyrus, sans-serif;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.pycharm:hover .tooltiptext {
-    visibility: visible;
-}
-
-.python {
-    position: relative;
-    display: inline-block;
-}
-
-.python .tooltiptext {
-    font: 20px "SUSE", Papyrus, sans-serif;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.python:hover .tooltiptext {
-    visibility: visible;
-}
-
-.replit {
-    position: relative;
-    display: inline-block;
-}
-
-.replit .tooltiptext {
-    font: 20px "SUSE", Papyrus, sans-serif;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.replit:hover .tooltiptext {
-    visibility: visible;
-}
-
-.rpi {
-    position: relative;
-    display: inline-block;
-}
-
-.rpi .tooltiptext {
-    font: 20px "SUSE", Papyrus, sans-serif;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.rpi:hover .tooltiptext {
-    visibility: visible;
-}
-
-.ubuntu {
-    position: relative;
-    display: inline-block;
-}
-
-.ubuntu .tooltiptext {
-    font: 20px "SUSE", Papyrus, sans-serif;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.ubuntu:hover .tooltiptext {
-    visibility: visible;
-}
-
-.virtualbox {
-    position: relative;
-    display: inline-block;
-}
-
-.virtualbox .tooltiptext {
-    font: 20px "SUSE", Papyrus, sans-serif;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.virtualbox:hover .tooltiptext {
-    visibility: visible;
-}
-
-.vscode {
-    position: relative;
-    display: inline-block;
-}
-
-.vscode .tooltiptext {
-    font: 20px "SUSE", Papyrus, sans-serif;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.vscode:hover .tooltiptext {
-    visibility: visible;
-}
-
-.winxp {
-    position: relative;
-    display: inline-block;
-}
-
-.winxp .tooltiptext {
-    font: 20px "SUSE", Papyrus, sans-serif;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.winxp:hover .tooltiptext {
-    visibility: visible;
-}
-
-.win7 {
-    position: relative;
-    display: inline-block;
-}
-
-.win7 .tooltiptext {
-    font: 20px "SUSE", Papyrus, sans-serif;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.win7:hover .tooltiptext {
-    visibility: visible;
-}
-
-.win10 {
-    position: relative;
-    display: inline-block;
-}
-
-.win10 .tooltiptext {
-    font: 20px "SUSE", Papyrus, sans-serif;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.win10:hover .tooltiptext {
-    visibility: visible;
-}
-
-.wix {
-    position: relative;
-    display: inline-block;
-}
-
-.wix .tooltiptext {
-    font: 20px "SUSE", Papyrus, sans-serif;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.wix:hover .tooltiptext {
-    visibility: visible;
-}
-
-.wix {
-    transition: transform .2s;
-}
-
-.wix:hover {
+    
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+.clock:hover {
     transform: scale(1.1);
+    background-color: rgba(38, 133, 255, 0.8);
 }
 
-.aternos {
-    transition: transform .2s;
+.clock.animate {
+    transform: rotate(180deg) scale(0.8);
+    opacity: 0.5;
 }
 
-.aternos:hover {
-    transform: scale(1.1);
-}
-
-.cloudflare {
-    transition: transform .2s;
-}
-
-.cloudflare:hover {
-    transform: scale(1.1);
-}
-
-.css {
-    transition: transform .2s;
-}
-
-.css:hover {
-    transform: scale(1.1);
-}
-
-.flask {
-    transition: transform .2s;
-}
-
-.flask:hover {
-    transform: scale(1.1);
-}
-
-.freenom {
-    transition: transform .2s;
-}
-
-.freenom:hover {
-    transform: scale(1.1);
-}
-
-.github {
-    transition: transform .2s;
-}
-
-.github:hover {
-    transform: scale(1.1);
-}
-
-.gsites {
-    transition: transform .2s;
-}
-
-.gsites:hover {
-    transform: scale(1.1);
-}
-
-.html {
-    transition: transform .2s;
-}
-
-.html:hover {
-    transform: scale(1.1);
-}
-
-.lubuntu {
-    transition: transform .2s;
-}
-
-.lubuntu:hover {
-    transform: scale(1.1);
-}
-
-.lxmint {
-    transition: transform .2s;
-}
-
-.lxmint:hover {
-    transform: scale(1.1);
-}
-
-.pterodactyl {
-    transition: transform .2s;
-}
-
-.pterodactyl:hover {
-    transform: scale(1.1);
-}
-
-.pycharm {
-    transition: transform .2s;
-}
-
-.pycharm:hover {
-    transform: scale(1.1);
-}
-
-.python {
-    transition: transform .2s;
-}
-
-.python:hover {
-    transform: scale(1.1);
-}
-
-.replit {
-    transition: transform .2s;
-}
-
-.replit:hover {
-    transform: scale(1.1);
-}
-
-.rpi {
-    transition: transform .2s;
-}
-
-.rpi:hover {
-    transform: scale(1.1);
-}
-
-.ubuntu {
-    transition: transform .2s;
-}
-
-.ubuntu:hover {
-    transform: scale(1.1);
-}
-
-.virtualbox {
-    transition: transform .2s;
-}
-
-.virtualbox:hover {
-    transform: scale(1.1);
-}
-
-.vscode {
-    transition: transform .2s;
-}
-
-.vscode:hover {
-    transform: scale(1.1);
-}
-
-.winxp {
-    transition: transform .2s;
-}
-
-.winxp:hover {
-    transform: scale(1.1);
-}
-
-.win7 {
-    transition: transform .2s;
-}
-
-.win7:hover {
-    transform: scale(1.1);
-}
-
-.win10 {
-    transition: transform .2s;
-}
-
-.win10:hover {
-    transform: scale(1.1);
-}
-
-.wix {
-    transition: transform .2s;
-}
-
-.wix:hover {
-    transform: scale(1.1);
-}
-
-.discord {
-    transition: transform .2s;
-}
-
-.discord:hover {
-    transform: scale(1.1);
-}
-
-.alinea1 {
+.alinea {
     transition-duration: 4s;
-}
-
-.alinea1:hover {
-    background-color: rgb(0, 200, 255);
+    margin-bottom: 70px;
+    padding: 30px 0;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
     border-radius: 25px;
 }
 
-.alinea2 {
-    transition-duration: 4s;
-}
-
-.alinea2:hover {
+.alinea:hover {
     background-color: rgb(0, 200, 255);
-    border-radius: 25px;
 }
-
-.alinea3 {
-    transition-duration: 4s;
-}
-
-.alinea3:hover {
-    background-color: rgb(0, 200, 255);
-    border-radius: 25px;
-}
-
-.alinea4 {
-    transition-duration: 4s;
-}
-
-.alinea4:hover {
-    background-color: rgb(0, 200, 255);
-    border-radius: 25px;
-}
-
-.alinea5 {
-    transition-duration: 4s;
-}
-
-.alinea5:hover {
-    background-color: rgb(0, 200, 255);
-    border-radius: 25px;
-}
-
 .proj1 {
     transition: transform .2s;
+    margin-bottom: 60px;
 }
 
 .proj1:hover {
     transform: scale(0.9);
 }
 
-.proj2 {
+.prog {
     transition: transform .2s;
+    width: 100%;
+    max-width: 40%;
 }
 
-.proj2:hover {
+.prog:hover {
     transform: scale(0.9);
-}
-
-.exp1 {
-    transition: transform .2s;
-}
-
-.exp1:hover {
-    transform: scale(0.9);
-}
-
-.exp2 {
-    transition: transform .2s;
-}
-
-.exp2:hover {
-    transform: scale(0.9);
-}
-
-.exp3 {
-    transition: transform .2s;
-}
-
-.exp3:hover {
-    transform: scale(0.9);
-}
-
-.prog1 {
-    transition: transform .2s;
-}
-
-.prog1:hover {
-    transform: scale(0.9);
-}
-
-.prog2 {
-    transition: transform .2s;
-}
-
-.prog2:hover {
-    transform: scale(0.9);
-}
-
-.prog3 {
-    transition: transform .2s;
-}
-
-.prog3:hover {
-    transform: scale(0.9);
-}
-
-.prog4 {
-    transition: transform .2s;
-}
-
-.prog4:hover {
-    transform: scale(0.9);
-}
-
-.boven {
-    border: 30px solid transparent;
-    border-image: url(xpborder.webp) 30 round;
-    height: fit-content;
-    padding: auto;
-    margin: auto;
-    text-align: center;
-    background-color: rgba(255, 187, 0, 0.694);
-    font: bolder 20px "SUSE", Papyrus, sans-serif;
 }
 
 .techsdiv>div>img {
     border-radius: 25px;
 }
 
-.boven {
-    transition: transform .2s;
-}
-
-.boven:hover {
-    transform: scale(1.1);
-}
-
 .navigatie {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
     background-color: rgb(0, 51, 255);
     border: 2px solid #001392;
+    border-radius: 0;
     height: 100px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 150px;
+    gap: 200px;
     z-index: 9;
-    border-radius: 1000px;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .buttons {
@@ -1232,119 +485,68 @@ body {
     font: bolder 20px "Handjet", Papyrus, sans-serif;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 1000px;
+    border-radius: 25px;
     justify-content: center;
     align-items: center;
-}
-
-
-
-
-.buttons {
-    background-color: #03a045;
+    background-color: #48cae4;
     color: black;
-    border: 2px solid #03a045;
+    border: 2px solid #486ce4;
 }
 
 .buttons:hover {
-    background-color: rgb(0, 255, 191);
+    background-color: #2aa1dcab;
     color: black;
     transform: scale(0.9);
 }
 
-.buttons1 {
+.buttons1, .buttons2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 150px;
-}
-
-.buttons2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 150px;
+    gap: 200px;
 }
 
 @media only screen and (max-width: 1000px) {
-    .project1 {
-        width: fit-content;
-        height: 300px;
+    .project1, .project2 {
+        width: 100%;
+        max-width: 90%;
+        height: auto;
+        min-height: 150px;
         padding: 30px;
-        border: 5px solid rgb(0, 4, 255);
-        margin: auto;
-        text-align: center;
-        background-color: rgba(26, 110, 255, 0.667)
+        box-sizing: border-box;
     }
 
-    .project2 {
-        font: 15px "Press Start 2P", Papyrus, sans-serif;
-        width: fit-content;
-        height: 250px;
+    [class^="xp"] {
+        width: 100%;
+        max-width: 90%;
+        height: auto;
+        min-height: 100px;
         padding: 30px;
-        border: 5px solid rgb(0, 4, 255);
-        margin: auto;
-        text-align: center;
-        background-color: rgba(26, 110, 255, 0.667)
+        box-sizing: border-box;
     }
 
-    .xp1 {
-        font: 15px "Press Start 2P", Papyrus, sans-serif;
-        width: fit-content;
-        height: 100px;
-        padding: 30px;
-        border: 5px solid rgb(0, 4, 255);
-        margin: auto;
-        text-align: center;
-        background-color: rgba(26, 110, 255, 0.667)
+    .techsdiv {
+        width: 100%;
+        max-width: 95%;
+        padding: 15px;
     }
 
-    .xp2 {
-        font: 15px "Press Start 2P", Papyrus, sans-serif;
-        width: fit-content;
-        height: 100px;
-        padding: 30px;
-        border: 5px solid rgb(0, 4, 255);
-        margin: auto;
-        text-align: center;
-        background-color: rgba(26, 110, 255, 0.667)
+    .progcontainer1, .progcontainer2 {
+        flex-direction: column;
+        gap: 30px;
     }
 
-    .xp3 {
-        font: 15px "Press Start 2P", Papyrus, sans-serif;
-        width: fit-content;
-        height: 100px;
-        padding: 30px;
-        border: 5px solid rgb(0, 4, 255);
-        margin: auto;
-        text-align: center;
-        background-color: rgba(26, 110, 255, 0.667)
-    }
-
-    .boven {
-        border: 30px solid transparent;
-        border-image: url(xpborder.webp) 30 round;
-        width: fit-content;
-        height: fit-content;
-        padding: auto;
-        margin: auto;
-        text-align: center;
-        background-color: rgba(255, 196, 0, 0.603);
-        font: bolder 20px "SUSE", Papyrus, sans-serif;
+    .prog {
+        max-width: 90%;
     }
 
     .navigatie {
-        position: sticky;
-        background-color: rgb(0, 51, 255);
-        border: 2px solid #001392;
-        height: fit-content;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 0px;
-        z-index: 9;
-        border-radius: 1000px;
+        max-width: 100%;
+    }
+
+    main {
+        max-width: 100%;
+        padding: 0 10px;
     }
 
     .buttons {
@@ -1360,101 +562,27 @@ body {
         font: bolder 20px "Handjet", Papyrus, sans-serif;
         margin-left: auto;
         margin-right: auto;
-        border-radius: 1000px;
+        border-radius: 25px;
         flex-direction: column;
     }
 
-    .buttons1 {
+    .buttons1, .buttons2 {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         gap: 0px;
+        width: 100%;
     }
-
-    .buttons2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 0px;
-    }
-
-
 }
 
-
-
 @media only screen and ((min-width: 600px) and (max-width: 1000px)) {
-    .project1 {
-        width: fit-content;
-        height: 300px;
-        padding: 30px;
-        border: 5px solid rgb(0, 4, 255);
-        margin: auto;
-        text-align: center;
-        background-color: rgba(26, 110, 255, 0.667)
-    }
-
-    .project2 {
-        font: 15px "Press Start 2P", Papyrus, sans-serif;
-        width: fit-content;
-        height: 250px;
-        padding: 30px;
-        border: 5px solid rgb(0, 4, 255);
-        margin: auto;
-        text-align: center;
-        background-color: rgba(26, 110, 255, 0.667)
-    }
-
-    .xp1 {
-        font: 15px "Press Start 2P", Papyrus, sans-serif;
-        width: fit-content;
-        height: 100px;
-        padding: 30px;
-        border: 5px solid rgb(0, 4, 255);
-        margin: auto;
-        text-align: center;
-        background-color: rgba(26, 110, 255, 0.667)
-    }
-
-    .xp2 {
-        font: 15px "Press Start 2P", Papyrus, sans-serif;
-        width: fit-content;
-        height: 100px;
-        padding: 30px;
-        border: 5px solid rgb(0, 4, 255);
-        margin: auto;
-        text-align: center;
-        background-color: rgba(26, 110, 255, 0.667)
-    }
-
-    .xp3 {
-        font: 15px "Press Start 2P", Papyrus, sans-serif;
-        width: fit-content;
-        height: 100px;
-        padding: 30px;
-        border: 5px solid rgb(0, 4, 255);
-        margin: auto;
-        text-align: center;
-        background-color: rgba(26, 110, 255, 0.667)
-    }
-
-    .boven {
-        border: 30px solid transparent;
-        border-image: url(xpborder.webp) 30 round;
-        width: fit-content;
-        height: fit-content;
-        padding: auto;
-        margin: auto;
-        text-align: center;
-        background-color: rgba(255, 196, 0, 0.603);
-        font: bolder 20px "SUSE", Papyrus, sans-serif;
-    }
-
     .navigatie {
-        position: sticky;
+        position: fixed;
         top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
         background-color: rgb(0, 51, 255);
         border: 2px solid #001392;
         height: fit-content;
@@ -1464,7 +592,9 @@ body {
         align-items: center;
         gap: 10px;
         z-index: 9;
-        border-radius: 1000px;
+        border-radius: 0;
+        box-sizing: border-box;
+        margin: 0;
     }
 
     .buttons {
@@ -1480,32 +610,245 @@ body {
         font: bolder 20px "Handjet", Papyrus, sans-serif;
         margin-left: auto;
         margin-right: auto;
-        border-radius: 1000px;
+        border-radius: 25px;
         flex-direction: row;
+        width: auto;
     }
 
-    .buttons1 {
+    .buttons1, .buttons2 {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         gap: 10px;
-    }
-
-    .buttons2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
+        width: auto;
     }
 
     .navigatie .buttons {
         color: black; 
     }
+}
+
+@media only screen and (max-width: 600px) {
+    .navigatie {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+        background-color: rgb(0, 51, 255);
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+        z-index: 999;
+        box-sizing: border-box;
+        margin: 0;
+        overflow-x: hidden;
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    .buttons1, .buttons2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        margin: 5px 0;
+        flex-wrap: wrap;
+        padding: 0 5px;
+        box-sizing: border-box;
+    }
+
+    .buttons {
+        background-color: #48cae4;
+        color: black;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 25px;
+        font-size: 16px;
+        margin: 2px;
+        white-space: nowrap;
+        width: 120px;
+        height: 40px;
+        flex: none;
+        box-sizing: border-box;
+    }
+
+    .techsdiv {
+        max-width: 95%;
+        padding: 10px;
+    }
     
+    .techicon {
+        margin: 3px;
+    }
+    
+    .techs {
+        width: 80px;
+        height: 80px;
+    }
 
+    body {
+        padding-top: 120px;
+        margin: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
 
+    .clock {
+        width: 150px;
+        bottom: 80px;
+        right: 10px;
+        font-size: 14px;
+    }
+    
+    .clock-text {
+        font-size: 16px;
+    }
+    
+    .lijn1 {
+        font-size: 40px;
+    }
+    
+    .lijn2, .lijn4, .lijn7, .lijn9, .lijn11 {
+        font-size: 22px;
+    }
+    
+    .lijn3, .lijn6, .lijn8, .lijn10 {
+        font-size: 32px;
+    }
+    
+    .project1, .project2, [class^="xp"] {
+        padding: 20px;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+    .navigatie {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 8px;
+        display: flex !important;
+        justify-content: center;
+        gap: 15px;
+        z-index: 999;
+        box-sizing: border-box;
+    }
+
+    body {
+        padding-top: 60px;
+    }
+    
+    .techs {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+#menuIcon {
+    transition: all 1s ease;
+    width: 70px;
+    height: 70px;
+}
+
+#menuIcon:hover {
+    cursor: pointer;
+}
+
+.animate {
+    transform: rotate(180deg) scale(0.8);
+    opacity: 0.5;
+}
+
+.copyright-footer {
+    text-align: left;
+    padding: 35px 0;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    border-top: 2px solid rgba(0, 4, 255, 0.5);
+    background-color: rgba(0, 3, 46, 0.9);
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright-footer p {
+    font: bold 24px "Press Start 2P", Papyrus, sans-serif;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    padding: 0 20px;
+}
+
+.copyright-footer .icons-container {
+    padding-right: 20px;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow-x: hidden;
+    position: relative;
+    margin-top: auto;
+    padding-top: 18vh;
+}
+
+.extra-space {
+    display: block;
+    height: 20px;
+}
+
+#projects-container {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+#experiences-container {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+#skills-container {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-bottom: 140px;
+}
+
+@media only screen and (max-width: 768px) {
+    .prog {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+    
+    .progcontainer1, .progcontainer2 {
+        gap: 30px;
+    }
 }
 
 .interestingbuttona {
@@ -1532,7 +875,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: left 0.3s ease;
+    transition: all 0.3s ease;
+    width: 70px;
+    height: 70px;
 }
 
 .hamburger span {
@@ -1550,6 +895,7 @@ body {
     background: rgb(0, 51, 255);
     padding-top: 60px;
     transition: left 0.3s ease;
+    box-sizing: border-box;
 }
 
 .menu-items a {
@@ -1568,18 +914,6 @@ body {
     left: 0;
 }
 
-.hamburger-menu.active .hamburger span:first-child {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger-menu.active .hamburger span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger-menu.active .hamburger span:last-child {
-    transform: rotate(-45deg) translate(7px, -7px);
-}
-
 .hamburger-menu.active .hamburger {
     left: 270px;
 }
@@ -1592,100 +926,13 @@ body {
     .navigatie {
         display: none;
     }
-}
-
-/* Mobiele aanpassingen */
-@media only screen and (max-width: 600px) {
-    .navigatie {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: auto;
-        background-color: rgb(0, 51, 255);
-        display: flex !important;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 10px 0;
-        z-index: 999;
-        box-sizing: border-box;
-        margin: 0;
-        overflow-x: hidden;
+    
+    main {
+        max-width: 100%;
+        padding: 0 10px;
     }
-
-    .buttons1, .buttons2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        width: 100%;
-        margin: 5px 0;
-        flex-wrap: wrap;
-        padding: 0 5px;
-        box-sizing: border-box;
+    
+    .copyright-footer {
+        max-width: 100%;
     }
-
-    .buttons {
-        background-color: #03a045;
-        color: black;
-        border: none;
-        padding: 8px 16px;
-        border-radius: 1000px; /* Aangepast naar dezelfde border-radius als desktop */
-        font-size: 16px;
-        margin: 2px;
-        white-space: nowrap;
-        width: 120px;
-        height: 40px;
-        flex: none;
-    }
-
-    body {
-        padding-top: 120px;
-        margin: 0;
-        width: 100%;
-        overflow-x: hidden;
-    }
-}
-
-/* Tablet aanpassingen */
-@media only screen and (min-width: 601px) and (max-width: 1000px) {
-    .navigatie {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-        padding: 8px;
-        display: flex !important;
-        justify-content: center;
-        gap: 15px;
-        z-index: 999;
-    }
-
-    body {
-        padding-top: 60px;
-    }
-}
-
-/* Zorg ervoor dat de desktop versie ongewijzigd blijft */
-@media only screen and (min-width: 1001px) {
-    /* Hier komen geen nieuwe stijlen, zodat de bestaande desktop stijlen behouden blijven */
-}
-
-#menuIcon {
-    transition: all 1s ease;
-    width: 70px;
-    height: 70px;
-}
-
-#menuIcon:hover {
-    cursor: pointer;
-}
-
-.animate {
-    transform: rotate(180deg) scale(0.8);
-    opacity: 0.5;
 }

@@ -1,168 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta description="A full stack developer based in Belgium. Working on various projects, ranging from small websites to desktop applications. Projects.">
     <title>portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        let skills = [
-            { skill: 'html', level: 85, tags: ["programmeren", "front-end"] },
-            { skill: 'css', level: 75, tags: ["programmeren", "front-end"] },
-            { skill: 'javascript', level: 55, tags: ["programmeren", "front-end"] },
-            { skill: 'python', level: 80, tags: ["programmeren", "back-end"] }
-        ];
-
-        window.addEventListener('load', () => {
-            let skillValue = {
-                python: skills[3].level,
-                javascript: skills[2].level,
-                html: skills[0].level,
-                css: skills[1].level
-            }
-
-            let pythonBar = document.getElementById("pythonBar");
-            let htmlBar = document.getElementById("htmlBar");
-            let cssBar = document.getElementById("cssBar");
-            let javascriptBar = document.getElementById("javascriptBar");
-            let intStarted = false;
-
-            let BarsY = pythonBar.offsetTop - 570;
-
-            if (window.pageYOffset > BarsY) {
-                if (!intStarted) {
-                    setIntervalBar(skillValue.python, pythonBar);
-                    setIntervalBar(skillValue.html, htmlBar);
-                    setIntervalBar(skillValue.css, cssBar);
-                    setIntervalBar(skillValue.javascript, javascriptBar);
-                    intStarted = true;
-                }
-            }
-
-
-
-
-            document.addEventListener('scroll', () => {
-                if (window.pageYOffset > BarsY) {
-                    if (!intStarted) {
-                        setIntervalBar(skillValue.python, pythonBar);
-                        setIntervalBar(skillValue.html, htmlBar);
-                        setIntervalBar(skillValue.css, cssBar);
-                        setIntervalBar(skillValue.javascript, javascriptBar);
-                        intStarted = true;
-                    }
-                }
-            })
-
-
-            function setIntervalBar(val, el) {
-
-                let startVal = 0;
-                //settings
-                let step = 0.17;
-                let speed = 10;
-
-                let barInt = setInterval(function () {
-
-                    console.log('el', el)
-                    console.log('startVal', startVal)
-                    console.log('val', val)
-                    startVal += step;
-                    if (startVal <= val) {
-                        el.style.width = startVal + "%";
-                    } else {
-                        console.log('bi', barInt)
-                        clearInterval(barInt);
-                    }
-
-                }, speed);
-            }
-
-            /*async function updateBargetal(value) {
-                for (let i = 0; i < value; i++) {
-                    await new Promise(resolve => setTimeout(() => {
-                        pythonBarGetal += 1;
-                        resolve();
-                    }, 100));
-
-                    console.log(bargetal);
-                    pythonBar.style.width = pythonBarGetal + "%";
-                    pythonBar.setAttribute("value", pythonBarGetal);
-                }
-            }*/
-
-
-
-
-
-            htmlBar.style.width = skillValue.html + "%";
-            htmlBar.setAttribute("value", skillValue.html);
-            cssBar.style.width = skillValue.css + "%";
-            cssBar.setAttribute("value", skillValue.css);
-            javascriptBar.style.width = skillValue.javascript + "%";
-            javascriptBar.setAttribute("value", skillValue.javascript);
-
-            // Hamburger menu functionaliteit
-            const hamburger = document.querySelector('.hamburger-menu');
-            const menuIcon = document.getElementById('menuIcon');
-            
-            menuIcon.addEventListener('click', () => {
-                menuIcon.classList.add('animate');
-                
-                setTimeout(() => {
-                    if (menuIcon.src.includes('burger-bar.png')) {
-                        menuIcon.src = 'close.png';
-                        hamburger.classList.add('active');
-                    } else {
-                        menuIcon.src = 'burger-bar.png';
-                        hamburger.classList.remove('active');
-                    }
-                    menuIcon.classList.remove('animate');
-                }, 150);
-            });
-            
-            // Sluit menu alleen wanneer op de sluitknop wordt geklikt
-            document.querySelectorAll('.menu-items a').forEach(link => {
-                link.addEventListener('click', () => {
-                    // Menu blijft open na het klikken op een link
-                    // Verwijder deze event listener als je wilt dat het menu open blijft
-                });
-            });
-        })
-
-        function buildSkillHtml(skill) {
-            return `<div class='skill'>
-                        <div class='skill-title'>
-                            ${skill.skill}
-                        </div>
-                        <div class="tags"
-                            ${printTags(skill)}
-                        </div>
-                        <div class="skill-level">
-                            ${skill.level}
-                        </div>
-                    </div>`
-        }
-
-        function printTags(skill) {
-            let tagsHTML = '';
-
-            skill.tags.forEach(tag => {
-                tagsHTML += `<span class="tag">${tag}</span>`
-            });
-
-            return tagsHTML;
-        }
-
-
-    </script>
+    <link href="style.css" rel="stylesheet">
 </head>
-
 <body>
-    <br>
-    <br>
     <div class="navigatie">
         <div class="buttons1">
             <button class="buttons" onclick="document.location='#projects'">projects</button>
@@ -173,248 +18,133 @@
             <button class="buttons" onclick="document.location='#skills'">skills</button>
         </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <!--html klok embed-->
-    <div class="clock">
-        <p class="clock-text">My local time: </p>
-        <iframe src="https://free.timeanddate.com/clock/i9jo1j1h/n48/tct/pct/th1" frameborder="0" width="60" height="30"
-            allowtransparency="true" style="display: block; margin-top: 13px;"></iframe>
-    </div>
-    <br>
-    <br>
-    <br>
-    <div class="boven">
-        <!--github link-->
-        <div class="github">
-            <a href="https://github.com/VulcanoSoftware">
-                <img src="github.webp" alt="github" style="width:100px;height:100px;">
-                <span class="tooltiptext">Github</span>
-            </a>
-        </div>
-        <!--discord link-->
-        <div class="discord">
-            <a href="https://discord.gg/bsbAr9Zdjg">
-                <img src="discord.webp" alt="discord" style="width:100px;height:100px;">
-                <span class="tooltiptext">Discord</span>
-            </a>
-        </div>
-    </div>
     <main>
-        <div class="alinea1">
+        <div class="alinea">
             <h1 class="lijn1">Hello, I am VulcanoCraft</h1>
-            <p class="lijn2">A full stack developer based in Belgium. <img src="belgium.webp" alt="belgium"
-                    style="width:30px;height:30px;">
-                <br>
+            <p class="lijn2">A full stack developer based in Belgium. <img src="belgium.webp" alt="belgium" style="width:30px;height:30px;">
+                <span class="extra-space"></span>
                 Working on various projects, ranging from small websites to desktop applications.
             </p>
         </div>
-        <br>
-        <div class="alinea2">
+        <div class="alinea">
             <h2 class="lijn3" id="projects">Projects</h2>
             <p class="lijn4">Personal projects that I have worked on in my free time.</p>
-            <br>
         </div>
-        <br>
-        <div class="proj1">
-            <div class="project1">
-                <p class="lijn5">
-                    <img src="pickaxe.webp" alt="pickaxe" style="width:80px;height:80px;"><img src="dirt.webp"
-                        alt="dirt" style="width:50px;height:50px;">
-                    <br>
-                    <b>VulcanoCraft</b>
-                    <br>
-                    <br>
-                    VulcanoCraft is a minecraft server with lots of features, this is the place where I make fun with my
-                    friends.
-                </p>
-            </div>
+        <div id="projects-container">
         </div>
-        <br>
-        <br>
-        <div class="proj2">
-            <div class="project2">
-                <b>Python desktop apps</b>
-                <br>
-                <br>
-                I made plenty of desktop apps using Python. If you want to see my Python apps, then go to my github
-                page. My most popular Python app is the VulcanoSoftware wifi password extractor
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="alinea3">
+        <div class="alinea">
             <p class="lijn6" id="experiences"><b>Experience</b></p>
             <p class="lijn7">
                 Things that I have done in my life.
             </p>
         </div>
-        <br>
-        <br>
-        <div class="exp1">
-            <div class="xp1">
-                VulcanoCraft
-                <br>
-                <i>server owner/administrator and developer</i>
-                <br>
-                Sep 2020 - Present
-            </div>
+        <div id="experiences-container">
         </div>
-        <br>
-        <br>
-        <div class="exp2">
-            <div class="xp2">
-                VulcanoSoftwareINC
-                <br>
-                <i>founder and developer</i>
-                <br>
-                Sep 2022 - Present
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="exp3">
-            <div class="xp3">
-                CodeAttack
-                <br>
-                <i>founder and developer</i>
-                <br>
-                Feb 2021 - Jun 2022
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="alinea4">
+        <div class="alinea">
             <h2 class="lijn8" id="techstack">Tech Stack</h2>
-            <br>
             <p class="lijn9">
                 <b>Various tools and technologies that I have worked with.</b>
             </p>
         </div>
-        <br>
-        <br>
-        <!--tech stack afbeeldingen-->
         <div class="techsdiv">
-            <div class="aternos">
-                <img src="aternos.webp" alt="aternos" style="width:100px;height:100px;" class="techs">
+            <div class="techicon">
+                <img class="techs" src="aternos.webp" alt="aternos" style="width:100px;height:100px;">
                 <span class="tooltiptext">aternos</span>
             </div>
-            <div class="cloudflare">
-                <img src="cloudflare.webp" alt="cloudflare" style="width:100px;height:100px;" class="techs">
+            <div class="techicon">
+                <img class="techs" src="cloudflare.webp" alt="cloudflare" style="width:100px;height:100px;">
                 <span class="tooltiptext">Cloudflare</span>
             </div>
-            <div class="css">
-                <img src="css.webp" alt="css" style="width:100px;height:100px;" class="techs">
+            <div class="techicon">
+                <img class="techs" src="css.webp" alt="css" style="width:100px;height:100px;">
                 <span class="tooltiptext">CSS</span>
             </div>
-            <div class="flask">
-                <img src="flask.webp" alt="flask" style="width:100px;height:100px;" class="techs">
+            <div class="techicon">
+                <img class="techs" src="flask.webp" alt="flask" style="width:100px;height:100px;">
                 <span class="tooltiptext">Flask</span>
             </div>
-            <div class="freenom">
-                <img src="freenom.webp" alt="freenom" style="width:100px;height:100px;" class="techs">
+            <div class="techicon">
+                <img class="techs" src="freenom.webp" alt="freenom" style="width:100px;height:100px;">
                 <span class="tooltiptext">Freenom</span>
             </div>
-            <div class="github">
-                <img src="github.webp" alt="github" style="width:100px;height:100px;" class="techs">
+            <div class="techicon">
+                <img class="techs" src="github.webp" alt="github" style="width:100px;height:100px;">
                 <span class="tooltiptext">Github</span>
             </div>
-            <div class="gsites">
-                <img src="gsites.webp" alt="google sites" style="width:100px;height:100px;" class="techs">
+            <div class="techicon">
+                <img class="techs" src="gsites.webp" alt="google sites" style="width:100px;height:100px;">
                 <span class="tooltiptext">Google Sites</span>
             </div>
-            <div class="html">
-                <img src="html.webp" alt="html" style="width:100px;height:100px;" class="techs">
+            <div class="techicon">
+                <img class="techs" src="html.webp" alt="html" style="width:100px;height:100px;">
                 <span class="tooltiptext">HTML</span>
             </div>
-            <div class="lubuntu">
-                <img src="lubuntu.webp" alt="lubuntu" style="width:100px;height:100px;" class="techs">
+            <div class="techicon">
+                <img class="techs" src="lubuntu.webp" alt="lubuntu" style="width:100px;height:100px;">
                 <span class="tooltiptext">lubuntu</span>
             </div>
-            <div class="lxmint">
-                <img src="lxmint.webp" alt="linux mint" style="width:100px;height:100px;" class="techs">
+            <div class="techicon">
+                <img class="techs" src="lxmint.webp" alt="linux mint" style="width:100px;height:100px;">
                 <span class="tooltiptext">linux mint</span>
             </div>
-            <div class="pterodactyl">
-                <img src="pterodactyl.webp" alt="pterodactyl" style="width:100px;height:100px;" class="techs">
+            <div class="techicon">
+                <img class="techs" src="pterodactyl.webp" alt="pterodactyl" style="width:100px;height:100px;">
                 <span class="tooltiptext">pterodactyl</span>
             </div>
-            <div class="pycharm">
-                <img src="pycharm.webp" alt="pycharm" style="width:100px;height:100px;" class="techs">
+            <div class="techicon">
+                <img class="techs" src="pycharm.webp" alt="pycharm" style="width:100px;height:100px;">
                 <span class="tooltiptext">pycharm</span>
             </div>
-            <div class="python">
-                <img src="python.webp" alt="python" style="width:100px;height:100px;" class="techs">
+            <div class="techicon">
+                <img class="techs" src="python.webp" alt="python" style="width:100px;height:100px;">
                 <span class="tooltiptext">Python</span>
             </div>
-            <div class="replit">
-                <img src="replit.webp" alt="replit" style="width:100px;height:100px;" class="techs">
+            <div class="techicon">
+                <img class="techs" src="replit.webp" alt="replit" style="width:100px;height:100px;">
                 <span class="tooltiptext">replit</span>
             </div>
-            <div class="rpi">
-                <img src="rpi.webp" alt="rpi" style="width:100px;height:100px;" class="techs">
+            <div class="techicon">
+                <img class="techs" src="rpi.webp" alt="rpi" style="width:100px;height:100px;">
                 <span class="tooltiptext">raspberry pi</span>
             </div>
-            <div class="ubuntu">
-                <img src="ubuntu.webp" alt="ubuntu" style="width:100px;height:100px;" class="techs">
+            <div class="techicon">
+                <img class="techs" src="ubuntu.webp" alt="ubuntu" style="width:100px;height:100px;">
                 <span class="tooltiptext">ubuntu</span>
             </div>
-            <div class="virtualbox">
-                <img src="virtualbox.webp" alt="virtualbox" style="width:100px;height:100px;" class="techs">
+            <div class="techicon">
+                <img class="techs" src="virtualbox.webp" alt="virtualbox" style="width:100px;height:100px;">
                 <span class="tooltiptext">virtualbox</span>
             </div>
-            <div class="vscode">
-                <img src="vscode.webp" alt="visual studio code" style="width:100px;height:100px;" class="techs">
+            <div class="techicon">
+                <img class="techs" src="vscode.webp" alt="visual studio code" style="width:100px;height:100px;">
                 <span class="tooltiptext">visual studio code</span>
             </div>
-            <div class="winxp">
-                <img src="winxp.webp" alt="windows xp" style="width:100px;height:100px;" class="techs">
+            <div class="techicon">
+                <img class="techs" src="winxp.webp" alt="windows xp" style="width:100px;height:100px;">
                 <span class="tooltiptext">windows XP</span>
             </div>
-            <div class="win7">
-                <img src="win7.webp" alt="windows 7" style="width:100px;height:100px;" class="techs">
+            <div class="techicon">
+                <img class="techs" src="win7.webp" alt="windows 7" style="width:100px;height:100px;">
                 <span class="tooltiptext">windows 7</span>
             </div>
-            <div class="win10">
-                <img src="win10.webp" alt="windows 10" style="width:100px;height:100px;" class="techs">
+            <div class="techicon">
+                <img class="techs" src="win10.webp" alt="windows 10" style="width:100px;height:100px;">
                 <span class="tooltiptext">windows 10</span>
             </div>
-            <div class="wix">
-                <img src="wix.webp" alt="wix" style="width:100px;height:100px;" class="techs">
+            <div class="techicon">
+                <img class="techs" src="wix.webp" alt="wix" style="width:100px;height:100px;">
                 <span class="tooltiptext">wix</span>
             </div>
         </div>
-        <br>
-        <!--progress bars-->
-        <div class="alinea5">
+        <div class="alinea">
             <h2 class="lijn10" id="skills">Skills</h2>
             <p class="lijn11">How good I am at certain programming languages</p>
         </div>
-
-        <div class="prog1">
-            <div class="progress">
-                <div class="bar1" id="pythonBar" max="100">Python</div>
-            </div>
-        </div>
-        <div class="prog2">
-            <div class="progress2">
-                <div class="bar2" id="htmlBar" max="100">html</div>
-            </div>
-        </div>
-        <div class="prog3">
-            <div class="progress3">
-                <div class="bar3" id="cssBar" max="100">css</div>
-            </div>
-        </div>
-        <div class="prog4">
-            <div class="progress4">
-                <div class="bar4" id="javascriptBar" max="100">JavaScript</div>
-            </div>
+        <div id="skills-container" class="progressdiv">
         </div>
         <div class="hamburger-menu">
             <div class="hamburger">
-                <img src="burger-bar.png" id="menuIcon" alt="menu icon">
+                <img id="menuIcon" src="burger-bar.png" alt="menu icon">
             </div>
             <div class="menu-items">
                 <a href="vulcanoclient/index.html">VulcanoClient</a>
@@ -423,9 +153,27 @@
             </div>
         </div>
     </main>
-
-
-
+    <footer class="copyright-footer">
+        <p>&copy; VulcanoCraft <span id="copyright-year"></span></p>
+        <div class="icons-container">
+            <div class="icon-wrapper github-icon">
+                <a href="https://github.com/VulcanoSoftware">
+                    <img src="github.webp" alt="github" style="width:50px;height:50px;">
+                    <span class="tooltiptext">Github</span>
+                </a>
+            </div>
+            <div class="icon-wrapper discord-icon">
+                <a href="https://discord.gg/bsbAr9Zdjg">
+                    <img src="discord.webp" alt="discord" style="width:50px;height:50px;">
+                    <span class="tooltiptext">Discord</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <div class="clock">
+        <p class="clock-text">My local time: </p>
+        <iframe src="https://free.timeanddate.com/clock/i9jo1j1h/n48/tct/pct/th1" frameborder="0" width="60" height="30" allowtransparency="true" style="display: block; margin-top: 13px;"></iframe>
+    </div>
+    <script src="script.js"></script>
 </body>
-
 </html>
