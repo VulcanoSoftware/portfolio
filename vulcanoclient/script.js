@@ -116,7 +116,7 @@ async function fetchDownloadCount() {
             animated = true;
         }
     } catch (error) {
-        console.error('Fout bij ophalen van download statistieken:', error);
+        console.error('Error retrieving download statistics:', error);
     }
 }
 
@@ -132,7 +132,7 @@ function isInViewport(element) {
 
 let huidigjaar = new Date().getFullYear();
 let foottext = document.getElementById('footercopy');
-foottext.innerHTML = `&copy; ${huidigjaar} VulcanoClient. Alle rechten voorbehouden.`;
+foottext.innerHTML = `&copy; ${huidigjaar} VulcanoClient. All rights reserved.`;
 
 fetchDownloadCount();
 

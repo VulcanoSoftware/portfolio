@@ -1,8 +1,8 @@
 let skills = [
-    { skill: 'html', level: 85, tags: ["programmeren", "front-end"], color: 'rgb(255, 0, 0)' },
-    { skill: 'css', level: 75, tags: ["programmeren", "front-end"], color: 'rgb(0, 47, 255)' },
-    { skill: 'javascript', level: 55, tags: ["programmeren", "front-end"], color: 'rgb(221, 255, 0)' },
-    { skill: 'python', level: 80, tags: ["programmeren", "back-end"], color: 'green' }
+    { skill: 'html', level: 85, tags: ["programming", "front-end"], color: 'rgb(255, 0, 0)' },
+    { skill: 'css', level: 75, tags: ["programming", "front-end"], color: 'rgb(0, 47, 255)' },
+    { skill: 'javascript', level: 55, tags: ["programming", "front-end"], color: 'rgb(221, 255, 0)' },
+    { skill: 'python', level: 80, tags: ["programming", "back-end"], color: 'green' }
 ];
 
 let projects = [
@@ -310,6 +310,28 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
+        const menuItems = document.querySelector('.menu-items');
+        if (menuItems) {
+            const navItems = [
+                { href: '#projects', text: 'Projects' },
+                { href: '#experiences', text: 'Experience' },
+                { href: '#techstack', text: 'Tech Stack' },
+                { href: '#skills', text: 'Skills' }
+            ];
+            
+            const existingItems = menuItems.innerHTML;
+            let newMenuContent = '';
+            
+            navItems.forEach(item => {
+                newMenuContent += `<a href="${item.href}">${item.text}</a>`;
+            });
+            
+            newMenuContent += '<div style="border-top: 1px solid rgba(255,255,255,0.3); margin: 10px 15px;"></div>';
+            newMenuContent += existingItems;
+            
+            menuItems.innerHTML = newMenuContent;
+        }
+
         const hamburger = document.querySelector('.hamburger-menu');
         const menuIcon = document.getElementById('menuIcon');
         
@@ -328,8 +350,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     menuIcon.classList.remove('animate');
                 }, 150);
             });
+            
+            const menuLinks = document.querySelectorAll('.menu-items a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuIcon.src = 'burger-bar.png';
+                    hamburger.classList.remove('active');
+                });
+            });
         }
     } catch (error) {
-        console.error('Er is een fout opgetreden bij het initialiseren van de pagina:', error);
+        console.error('An error occurred while initializing the page:', error);
     }
 });
