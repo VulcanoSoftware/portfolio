@@ -94,7 +94,17 @@ body {
     font-style: oblique;
 }
 
-.project1, .project2, [class^="xp"], .techsdiv, .progcontainer1, .progcontainer2, .prog, .clock, .navigatie, .hamburger, .menu-items {
+.project1,
+.project2,
+[class^="xp"],
+.techsdiv,
+.progcontainer1,
+.progcontainer2,
+.prog,
+.clock,
+.navigatie,
+.hamburger,
+.menu-items {
     box-sizing: border-box;
     width: 100%;
     max-width: 100%;
@@ -129,7 +139,10 @@ body {
     border-radius: 25px;
 }
 
-.project2 .grote-tekst{font-size:24px;font-family:"Press Start 2P",Papyrus,sans-serif}
+.project2 .grote-tekst {
+    font-size: 24px;
+    font-family: "Press Start 2P", Papyrus, sans-serif
+}
 
 .project2 .grotere-tekst {
     font-size: 28px;
@@ -246,7 +259,8 @@ body {
     transform: scale(1.1);
 }
 
-.github-icon, .discord-icon {
+.github-icon,
+.discord-icon {
     width: 50px;
     height: 50px;
 }
@@ -319,11 +333,12 @@ body {
     font-style: oblique;
 }
 
-.progcontainer1, .progcontainer2 {
+.progcontainer1,
+.progcontainer2 {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     gap: 70px;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 50px;
@@ -345,21 +360,24 @@ body {
 
 [id$="Bar"] {
     border-radius: 20px !important;
-    min-width: 30px; 
+    min-width: 30px;
 }
 
-.techicon, .html {
+.techicon,
+.html {
     position: relative;
     display: inline-block;
     transition: transform .2s;
     margin: 5px;
 }
 
-.techicon:hover, .html:hover {
+.techicon:hover,
+.html:hover {
     transform: scale(1.1);
 }
 
-.techicon .tooltiptext, .html .tooltiptext {
+.techicon .tooltiptext,
+.html .tooltiptext {
     font: 20px "SUSE", Papyrus, sans-serif;
     visibility: hidden;
     width: 120px;
@@ -375,7 +393,8 @@ body {
     margin-left: -60px;
 }
 
-.techicon:hover .tooltiptext, .html:hover .tooltiptext {
+.techicon:hover .tooltiptext,
+.html:hover .tooltiptext {
     visibility: visible;
 }
 
@@ -391,7 +410,7 @@ body {
     border-radius: 25px;
     display: flex;
     align-items: center;
-    
+
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -424,6 +443,7 @@ body {
 .alinea:hover {
     background-color: rgb(0, 200, 255);
 }
+
 .proj1 {
     transition: transform .2s;
     margin-bottom: 60px;
@@ -495,21 +515,74 @@ body {
     transform: scale(0.9);
 }
 
-.buttons1, .buttons2 {
+.buttons1,
+.buttons2 {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 200px;
 }
 
-@media only screen and (max-width: 1000px) {
-    .project1, .project2 {
+.copyright-footer {
+    text-align: left;
+    padding: 55px 0;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    border-top: 2px solid rgba(0, 4, 255, 0.5);
+    background-color: rgba(0, 3, 46, 0.9);
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright-footer p {
+    font: bold 24px "Press Start 2P", Papyrus, sans-serif;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    padding: 0 20px;
+}
+
+.copyright-footer .icons-container {
+    padding-right: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .project1,
+    .project2 {
         width: 100%;
         max-width: 90%;
         height: auto;
         min-height: 150px;
         padding: 30px;
         box-sizing: border-box;
+    }
+
+    .copyright-footer {
+        text-align: left;
+        padding: 85px 0;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        border-top: 2px solid rgba(0, 4, 255, 0.5);
+        background-color: rgba(0, 3, 46, 0.9);
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     [class^="xp"] {
@@ -527,7 +600,8 @@ body {
         padding: 15px;
     }
 
-    .progcontainer1, .progcontainer2 {
+    .progcontainer1,
+    .progcontainer2 {
         flex-direction: column;
         gap: 30px;
     }
@@ -562,7 +636,8 @@ body {
         flex-direction: column;
     }
 
-    .buttons1, .buttons2 {
+    .buttons1,
+    .buttons2 {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -572,7 +647,7 @@ body {
     }
 }
 
-@media only screen and ((min-width: 600px) and (max-width: 1000px)) {
+@media only screen and ((min-width: 600px) and (max-width: 1200px)) {
     .navigatie {
         position: fixed;
         top: 0;
@@ -586,7 +661,7 @@ body {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 100px;
         z-index: 9;
         border-radius: 0;
         box-sizing: border-box;
@@ -611,17 +686,18 @@ body {
         width: auto;
     }
 
-    .buttons1, .buttons2 {
+    .buttons1,
+    .buttons2 {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 100px;
         width: auto;
     }
 
     .navigatie .buttons {
-        color: black; 
+        color: black;
     }
 }
 
@@ -648,7 +724,8 @@ body {
         display: none !important;
     }
 
-    .buttons1, .buttons2 {
+    .buttons1,
+    .buttons2 {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -680,11 +757,11 @@ body {
         max-width: 95%;
         padding: 10px;
     }
-    
+
     .techicon {
         margin: 3px;
     }
-    
+
     .techs {
         width: 80px;
         height: 80px;
@@ -703,27 +780,36 @@ body {
         right: 10px;
         font-size: 14px;
     }
-    
+
     .clock-text {
         font-size: 16px;
     }
-    
+
     .lijn1 {
         font-size: 40px;
     }
-    
-    .lijn2, .lijn4, .lijn7, .lijn9, .lijn11 {
+
+    .lijn2,
+    .lijn4,
+    .lijn7,
+    .lijn9,
+    .lijn11 {
         font-size: 22px;
     }
-    
-    .lijn3, .lijn6, .lijn8, .lijn10 {
+
+    .lijn3,
+    .lijn6,
+    .lijn8,
+    .lijn10 {
         font-size: 32px;
     }
-    
-    .project1, .project2, [class^="xp"] {
+
+    .project1,
+    .project2,
+    [class^="xp"] {
         padding: 20px;
     }
-    
+
     main {
         padding-top: 30px;
     }
@@ -747,7 +833,7 @@ body {
     body {
         padding-top: 60px;
     }
-    
+
     .techs {
         width: 90px;
         height: 90px;
@@ -767,37 +853,6 @@ body {
 .animate {
     transform: rotate(180deg) scale(0.8);
     opacity: 0.5;
-}
-
-.copyright-footer {
-    text-align: left;
-    padding: 35px 0;
-    width: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    border-top: 2px solid rgba(0, 4, 255, 0.5);
-    background-color: rgba(0, 3, 46, 0.9);
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.copyright-footer p {
-    font: bold 24px "Press Start 2P", Papyrus, sans-serif;
-    color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-    margin: 0;
-    padding: 0 20px;
-}
-
-.copyright-footer .icons-container {
-    padding-right: 20px;
 }
 
 main {
@@ -846,8 +901,9 @@ main {
         max-width: 90%;
         margin-bottom: 20px;
     }
-    
-    .progcontainer1, .progcontainer2 {
+
+    .progcontainer1,
+    .progcontainer2 {
         gap: 30px;
     }
 }
@@ -928,20 +984,20 @@ main {
     .hamburger-menu {
         display: block;
     }
-    
+
     .navigatie {
         display: none !important;
     }
-    
+
     main {
         max-width: 100%;
         padding: 0 10px;
     }
-    
+
     .copyright-footer {
         max-width: 100%;
     }
-    
+
     body {
         padding-top: 20px;
     }
@@ -951,16 +1007,16 @@ main {
     .hamburger-menu.active .hamburger {
         left: 205px;
     }
-    
+
     .menu-items {
         width: 200px;
     }
-    
+
     .hamburger {
         width: 60px;
         height: 60px;
     }
-    
+
     #menuIcon {
         width: 50px;
         height: 50px;
