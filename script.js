@@ -193,7 +193,7 @@ function createSkillElement(skillData, index) {
 
 function setIntervalBar(val, el) {
     let startVal = 0;
-    let step = 0.5;
+    let step = 0.23;
     let speed = 5;
     
     el.style.borderRadius = '20px';

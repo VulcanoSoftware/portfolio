@@ -327,14 +327,10 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 50px;
-    transition: transform .2s;
     width: 100%;
     max-width: 100%;
 }
 
-.progcontainer1:hover, .progcontainer2:hover {
-    transform: scale(0.9);
-}
 
 .progress {
     box-sizing: content-box;
