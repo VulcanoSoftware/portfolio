@@ -2,8 +2,20 @@ from flask import Flask
 from flask import request, jsonify
 import pymongo
 import logging
+from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
+from datetime import timedelta
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
+app.config["JWT_SECRET_KEY"] = "iousdfgboshIHGOUIBVNiughinbohn894hj8gfn!"
+app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(hours=1)
+
+jwt = JWTManager(app)
+
+USERS = {
+    "admin": "password"
+}
 
 logging.basicConfig(level=logging.INFO)
 
@@ -16,7 +28,18 @@ projects = mongoDB.projects
 def home():
     current_host = request.url_root.replace(":5000/", "")
     app.logger.info(current_host)
-    return f'<h3>Welcome to the api homepage</h3><br>If you want to go to the actual website, click <a href="{current_host}:3000">here</a>'
+    return f'<h3>Welcome to the api homepage</h3><br>If you want to go to the actual website, click <a href="{current_host}:3000">here</a>.<br>If you want to go to the api docs, click <a href="{current_host}:3000/api.html">here</a>.'
+
+@app.route('/login', methods=["POST"])
+def login():
+    username = request.json.get("username")
+    password = request.json.get("password")
+    
+    if username not in USERS or USERS[username] != password:
+        return jsonify({"msg": "Bad username or password"}), 401
+    
+    access_token = create_access_token(identity=username)
+    return jsonify(access_token=access_token), 200
 
 # nog beveiligen met een login
 @app.route('/insertskill', methods=["GET", "POST"])

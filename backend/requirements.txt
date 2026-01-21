@@ -1,2 +1,4 @@
 pymongo==4.15.5
 Flask==3.1.2
+flask-jwt-extended
+flask-cors
