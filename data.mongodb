@@ -1,21 +1,21 @@
 db.skills.insertMany([
     {
-        'name': 'Javascript',
+        'name': 'JavaScript',
         'skillLevel': 7,
         'category': 'front-end',
     },
     {
-        'name': 'Css',
+        'name': 'CSS',
         'skillLevel': 7,
         'category': 'front-end',
     },
     {
-        'name': 'Html',
+        'name': 'HTML',
         'skillLevel': 7,
         'category': 'front-end',
     },
     {
-        'name': 'Sql',
+        'name': 'SQL',
         'skillLevel': 8,
         'category': 'back-end',
     },
@@ -41,14 +41,14 @@ db.projects.insertMany([
         'titel': 'Guess the animal',
         'foto': 'Guestheanimal.png',
         'beschrijving': 'Een leuk spel waarbij je het dier moet raden!',
-        'linkwebsite': 'file:///C:/Users/LoreWuytjens/OneDrive%20-%20WICO%20vzw/Applicatie%20en%20databeheer/Projecten/DierenSpelletjes/Dierengeluidjes.html',
+        'linkwebsite': 'vulcanocraft.is-a.dev',
         'welkeSkills': ['Html', 'CSS', 'JavaScript']
     },
     {
         'titel': 'Portfolio',
         'foto': 'portfolio.png',
         'beschrijving': 'Mijn persoonlijke portfolio website.',
-        'linkwebsite': 'file:///C:/Users/LoreWuytjens/OneDrive%20-%20WICO%20vzw/Applicatie%20en%20databeheer/Portfolio/Portfolio.html',
+        'linkwebsite': 'vulcanocraft.is-a.dev',
         'welkeSkills': ['HTML', 'CSS', 'JavaScript']
     }
 ])
