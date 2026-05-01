@@ -1,0 +1,54 @@
+db.skills.insertMany([
+    {
+        'name': 'JavaScript',
+        'skillLevel': 7,
+        'category': 'front-end',
+    },
+    {
+        'name': 'CSS',
+        'skillLevel': 7,
+        'category': 'front-end',
+    },
+    {
+        'name': 'HTML',
+        'skillLevel': 7,
+        'category': 'front-end',
+    },
+    {
+        'name': 'SQL',
+        'skillLevel': 8,
+        'category': 'back-end',
+    },
+    {
+        'name': 'C#',
+        'skillLevel': 6,
+        'category': 'back-end',
+    },
+    {
+        'name': 'Mongo',
+        'skillLevel': 6,
+        'category': 'back-end',
+    },
+    {
+        'name': 'Docker',
+        'skillLevel': 7,
+        'category': 'back-end',
+    }
+])
+
+db.projects.insertMany([
+    {
+        'titel': 'Guess the animal',
+        'foto': 'Guestheanimal.png',
+        'beschrijving': 'Een leuk spel waarbij je het dier moet raden!',
+        'linkwebsite': 'vulcanocraft.is-a.dev',
+        'welkeSkills': ['Html', 'CSS', 'JavaScript']
+    },
+    {
+        'titel': 'Portfolio',
+        'foto': 'portfolio.png',
+        'beschrijving': 'Mijn persoonlijke portfolio website.',
+        'linkwebsite': 'vulcanocraft.is-a.dev',
+        'welkeSkills': ['HTML', 'CSS', 'JavaScript']
+    }
+])
