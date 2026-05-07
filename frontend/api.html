@@ -4,8 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .warning-banner {
+            position: sticky;
+            top: 16px;
+            margin: 16px;
+            padding: 14px 18px;
+            background-color: #fff3cd;
+            border: 1.5px solid #f5a623;
+            border-radius: 8px;
+            color: #7a4f00;
+            font-size: 14px;
+            line-height: 1.5;
+            box-shadow: 0 4px 16px rgba(245, 166, 35, 0.2);
+            z-index: 1000;
+        }
+        .warning-banner strong {
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
+
+    <div class="warning-banner">
+        <strong>⚠ Warning:</strong> The delete endpoints aren't protected. For safety, those endpoints are commented out by default in <code>app.py</code>. If you want to use them, first uncomment them and restart the application. When you are done using the endpoint, please comment them again.
+    </div>
+
     <h2>add skill to the database</h2>
     <code>http://localhost:5000/insertskill?name=skillname&level=80&category=categoryname</code>
     <h2>get skill from the database</h2>
@@ -15,12 +39,28 @@
     <h2>delete a skill from the database</h2>
     <code>http://localhost:5000/deleteskill?name=skillname</code>
     <h2>add project to the database</h2>
-    <code>http://localhost:5000/insertproject?name=projectname&description=description%20about%20the%20project&footer=projectfooter</code>
+    <code>http://localhost:5000/insertproject?name=projectname&description=description%20about%20the%20project&footer=projectfooter&tags=python,flask,mongo&image=https://example.com/image.webp</code>
     <h2>get project from the database</h2>
     <code>http://localhost:5000/getproject?name=projectname</code>
     <h2>get all projects from the database</h2>
     <code>http://localhost:5000/getallprojects</code>
     <h2>delete a project from the database</h2>
     <code>http://localhost:5000/deleteproject?name=projectname</code>
+    <h2>add experience to the database</h2>
+    <code>http://localhost:5000/insertexperience?title=jobtitle&role=developer&period=2024-2026</code>
+    <h2>get experience from the database</h2>
+    <code>http://localhost:5000/getexperience?title=jobtitle</code>
+    <h2>get all experiences from the database</h2>
+    <code>http://localhost:5000/getallexperiences</code>
+    <h2>delete experience from the database</h2>
+    <code>http://localhost:5000/deleteexperience?title=jobtitle</code>
+    <h2>add tech stack item to the database</h2>
+    <code>http://localhost:5000/inserttech?name=python&label=Python&image=images/python.webp&alt=python</code>
+    <h2>get tech stack item from the database</h2>
+    <code>http://localhost:5000/gettech?name=python</code>
+    <h2>get all tech stack items from the database</h2>
+    <code>http://localhost:5000/getalltechstack</code>
+    <h2>delete tech stack item from the database</h2>
+    <code>http://localhost:5000/deletetech?name=python</code>
 </body>
 </html>

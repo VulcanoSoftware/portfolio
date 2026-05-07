@@ -7,6 +7,7 @@ services:
       - 3000:80
     depends_on:
       - backend
+
   backend:
     build: ./backend
     container_name: be
@@ -14,12 +15,11 @@ services:
       - "5000:5000"
     depends_on:
       - mongo
+
   mongo:
     image: mongo:5.0
     container_name: db
     ports:
       - "27017:27017"
     volumes:
-      - mongo-data:/data/db
-volumes:
-  mongo-data:
+      - ./mongo-data:/data/db
