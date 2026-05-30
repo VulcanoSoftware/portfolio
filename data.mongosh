@@ -1,0 +1,89 @@
+use db1
+
+// ── SKILLS ───────────────────────────────────────────────────────────────────
+db.skills.insertMany([
+    { "name": "HTML",       "skillLevel": "85", "category": "front-end" },
+    { "name": "CSS",        "skillLevel": "75", "category": "front-end" },
+    { "name": "JavaScript", "skillLevel": "55", "category": "front-end" },
+    { "name": "Python",     "skillLevel": "80", "category": "back-end"  },
+    { "name": "SQL",        "skillLevel": "30", "category": "back-end"  },
+    { "name": "MongoDB",    "skillLevel": "75", "category": "back-end"  },
+    { "name": "Docker",     "skillLevel": "65", "category": "back-end"  },
+    { "name": "C#",         "skillLevel": "55", "category": "back-end"  },
+    { "name": "PHP",        "skillLevel": "40", "category": "back-end"  }
+])
+
+// ── PROJECTS ─────────────────────────────────────────────────────────────────
+db.projects.insertMany([
+    { "name": "VulcanoCraft",        "description": "VulcanoCraft is a minecraft server with lots of features, this is the place where I make fun with my friends.", "footer": "", "tags": [], "image": "" },
+    { "name": "Python desktop apps", "description": "I made plenty of desktop apps using Python. If you want to see my Python apps, then go to my github page. My most popular Python app is the VulcanoSoftware wifi password extractor", "footer": "", "tags": [], "image": "" },
+    { "name": "Guess the animal",    "description": "A fun game where you have to guess the animal!", "footer": "", "tags": [], "image": "" },
+    { "name": "Portfolio",           "description": "My personal portfolio website.", "footer": "", "tags": [], "image": "" }
+])
+
+// ── EXPERIENCES ───────────────────────────────────────────────────────────────
+db.experiences.insertMany([
+    { "title": "VulcanoCraft",       "role": "server owner/administrator and developer", "period": "Sep 2020 - Present"  },
+    { "title": "VulcanoSoftwareINC", "role": "founder and developer",                   "period": "Sep 2022 - Present"  },
+    { "title": "CodeAttack",         "role": "founder and developer",                   "period": "Feb 2021 - Jun 2022" }
+])
+
+// ── TECHSTACK ─────────────────────────────────────────────────────────────────
+db.techstack.insertMany([
+    { "name": "Aternos",       "label": "Aternos",             "image": "images/aternos.webp",       "alt": "Aternos"             },
+    { "name": "Cloudflare",    "label": "Cloudflare",          "image": "images/cloudflare.webp",    "alt": "Cloudflare"          },
+    { "name": "CSS",           "label": "CSS",                 "image": "images/css.webp",           "alt": "CSS"                 },
+    { "name": "Flask",         "label": "Flask",               "image": "images/flask.webp",         "alt": "Flask"               },
+    { "name": "Freenom",       "label": "Freenom",             "image": "images/freenom.webp",       "alt": "Freenom"             },
+    { "name": "Github",        "label": "Github",              "image": "images/github.webp",        "alt": "Github"              },
+    { "name": "Gsites",        "label": "Google Sites",        "image": "images/gsites.webp",        "alt": "Google Sites"        },
+    { "name": "HTML",          "label": "HTML",                "image": "images/html.webp",          "alt": "HTML"                },
+    { "name": "Lubuntu",       "label": "Lubuntu",             "image": "images/lubuntu.webp",       "alt": "Lubuntu"             },
+    { "name": "Lxmint",        "label": "Linux Mint",          "image": "images/lxmint.webp",        "alt": "Linux Mint"          },
+    { "name": "Pterodactyl",   "label": "Pterodactyl",         "image": "images/pterodactyl.webp",   "alt": "Pterodactyl"         },
+    { "name": "Pycharm",       "label": "Pycharm",             "image": "images/pycharm.webp",       "alt": "Pycharm"             },
+    { "name": "Python",        "label": "Python",              "image": "images/python.webp",        "alt": "Python"              },
+    { "name": "Replit",        "label": "Replit",              "image": "images/replit.webp",        "alt": "Replit"              },
+    { "name": "Raspberrypi",   "label": "Raspberry Pi",        "image": "images/rpi.webp",           "alt": "Raspberry Pi"        },
+    { "name": "Ubuntu",        "label": "Ubuntu",              "image": "images/ubuntu.webp",        "alt": "Ubuntu"              },
+    { "name": "Virtualbox",    "label": "Virtualbox",          "image": "images/virtualbox.webp",    "alt": "Virtualbox"          },
+    { "name": "vscode",        "label": "Visual Studio Code",  "image": "images/vscode.webp",        "alt": "Visual Studio Code"  },
+    { "name": "WindowsXP",     "label": "Windows XP",          "image": "images/winxp.webp",         "alt": "Windows XP"          },
+    { "name": "Windows7",      "label": "Windows 7",           "image": "images/win7.webp",          "alt": "Windows 7"           },
+    { "name": "Windows10",     "label": "Windows 10",          "image": "images/win10.webp",         "alt": "Windows 10"          },
+    { "name": "Wix",           "label": "Wix",                 "image": "images/wix.webp",           "alt": "Wix"                 },
+    { "name": "PopOS",         "label": "PopOS",               "image": "images/popos.webp",         "alt": "PopOS"               },
+    { "name": "Debian",        "label": "Debian",              "image": "images/debian.webp",        "alt": "Debian"              },
+    { "name": "Fedora",        "label": "Fedora",              "image": "images/fedora.webp",        "alt": "Fedora"              },
+    { "name": "Wireguard",     "label": "Wireguard",           "image": "images/wireguard.webp",     "alt": "Wireguard"           },
+    { "name": "win11",         "label": "Windows 11",          "image": "images/win11.webp",         "alt": "Windows 11"          },
+    { "name": "Vmware",        "label": "Vmware",              "image": "images/vmware.webp",        "alt": "Vmware"              },
+    { "name": "VisualStudio",  "label": "Visual Studio",       "image": "images/visualstudio.webp",  "alt": "Visual Studio"       },
+    { "name": "Termux",        "label": "Termux",              "image": "images/termux.webp",        "alt": "Termux"              },
+    { "name": "Proxmox",       "label": "Proxmox",             "image": "images/proxmox.webp",       "alt": "Proxmox"             },
+    { "name": "PHP",           "label": "PHP",                 "image": "images/php.webp",           "alt": "PHP"                 },
+    { "name": "NodeJS",        "label": "NodeJS",              "image": "images/nodejs.webp",        "alt": "NodeJS"              },
+    { "name": "MySQL",         "label": "MySQL",               "image": "images/mysql.webp",         "alt": "MySQL"               },
+    { "name": "MongoDB",       "label": "MongoDB",             "image": "images/mongodb.webp",       "alt": "MongoDB"             },
+    { "name": "JavaScript",    "label": "JavaScript",          "image": "images/javascript.webp",    "alt": "JavaScript"          },
+    { "name": "Docker",        "label": "Docker",              "image": "images/docker.webp",        "alt": "Docker"              },
+    { "name": "cs",            "label": "C#",                  "image": "images/cs.webp",            "alt": "C#"                  },
+    { "name": "lxlite",        "label": "Linux Lite",          "image": "images/lxlite.webp",        "alt": "Linux Lite"          },
+    { "name": "Bluestacks",    "label": "Bluestacks",          "image": "images/bluestacks.webp",    "alt": "Bluestacks"          },
+    { "name": "PlanetVPN",     "label": "PlanetVPN",           "image": "images/planetvpn.webp",     "alt": "PlanetVPN"           },
+    { "name": "OpenVPN",       "label": "OpenVPN",             "image": "images/openvpn.webp",       "alt": "OpenVPN"             },
+    { "name": "Brave",         "label": "Brave",               "image": "images/brave.webp",         "alt": "Brave"               },
+    { "name": "CiscoPT",       "label": "Cisco Packet Tracer", "image": "images/ciscopt.webp",       "alt": "Cisco Packet Tracer" },
+    { "name": "VLC",           "label": "VLC",                 "image": "images/vlc.webp",           "alt": "VLC"                 },
+    { "name": "qBittorrent",   "label": "qBittorrent",         "image": "images/qbittorrent.webp",   "alt": "qBittorrent"         },
+    { "name": "ProtonVPN",     "label": "ProtonVPN",           "image": "images/protonvpn.webp",     "alt": "ProtonVPN"           },
+    { "name": "Chrome",        "label": "Chrome",              "image": "images/chrome.webp",        "alt": "Chrome"              },
+    { "name": "FileZilla",     "label": "FileZilla",           "image": "images/filezilla.webp",     "alt": "FileZilla"           },
+    { "name": "FoxitReader",   "label": "Foxit Reader",        "image": "images/foxitreader.webp",   "alt": "Foxit Reader"        },
+    { "name": "Tailscale",     "label": "Tailscale",           "image": "images/tailscale.webp",     "alt": "Tailscale"           },
+    { "name": "Putty",         "label": "Putty",               "image": "images/putty.webp",         "alt": "Putty"               },
+    { "name": "Gitlab",        "label": "Gitlab",              "image": "images/gitlab.webp",        "alt": "Gitlab"              },
+    { "name": "Vercel",        "label": "Vercel",              "image": "images/vercel.webp",        "alt": "Vercel"              },
+    { "name": "Git",           "label": "Git",                 "image": "images/git.webp",           "alt": "Git"                 },
+    { "name": "7zip",          "label": "7zip",                "image": "images/7zip.webp",          "alt": "7zip"                }
+])
