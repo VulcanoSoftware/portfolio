@@ -80,15 +80,15 @@ def login():
     return jsonify(access_token=token), 200
 
 
-@app.route("/insertskill", methods=["GET", "POST"])
-def insert_skill():
-    skill = {
-        "name": request.args.get("name"),
-        "skillLevel": request.args.get("level"),
-        "category": request.args.get("category"),
-    }
-    skills.insert_one(skill)
-    return jsonify({"message": "Skill inserted successfully"}), 200
+#@app.route("/insertskill", methods=["GET", "POST"])
+#def insert_skill():
+#    skill = {
+#        "name": request.args.get("name"),
+#        "skillLevel": request.args.get("level"),
+#        "category": request.args.get("category"),
+#    }
+#    skills.insert_one(skill)
+#    return jsonify({"message": "Skill inserted successfully"}), 200
 
 
 @app.route("/getskill", methods=["GET", "POST"])
@@ -121,30 +121,30 @@ def get_all_skills():
     return jsonify(all_items), 200
 
 
-@app.route("/deleteskill", methods=["GET", "POST"])
-def delete_skill():
-    return delete_by_field(
-        collection=skills,
-        field="name",
-        value=request.args.get("name"),
-        missing_message="Missing skill name",
-        not_found_message="Skill not found",
-        success_message="Skill deleted successfully",
-        response_key="name",
-    )
+#@app.route("/deleteskill", methods=["GET", "POST"])
+#def delete_skill():
+#    return delete_by_field(
+#        collection=skills,
+#        field="name",
+#        value=request.args.get("name"),
+#        missing_message="Missing skill name",
+#        not_found_message="Skill not found",
+#        success_message="Skill deleted successfully",
+#        response_key="name",
+#    )
 
 
-@app.route("/insertproject", methods=["GET", "POST"])
-def insert_project():
-    project = {
-        "name": request.args.get("name"),
-        "description": request.args.get("description"),
-        "footer": request.args.get("footer"),
-        "tags": split_tags(request.args.get("tags")),
-        "image": request.args.get("image"),
-    }
-    projects.insert_one(project)
-    return jsonify({"message": "Project inserted successfully"}), 200
+#@app.route("/insertproject", methods=["GET", "POST"])
+#def insert_project():
+#    project = {
+#        "name": request.args.get("name"),
+#        "description": request.args.get("description"),
+#        "footer": request.args.get("footer"),
+#        "tags": split_tags(request.args.get("tags")),
+#        "image": request.args.get("image"),
+#    }
+#    projects.insert_one(project)
+#    return jsonify({"message": "Project inserted successfully"}), 200
 
 
 @app.route("/getproject", methods=["GET", "POST"])
@@ -181,28 +181,28 @@ def get_all_projects():
     return jsonify(all_items), 200
 
 
-@app.route("/deleteproject", methods=["GET", "POST"])
-def delete_project():
-    return delete_by_field(
-        collection=projects,
-        field="name",
-        value=request.args.get("name"),
-        missing_message="Missing project name",
-        not_found_message="Project not found",
-        success_message="Project deleted successfully",
-        response_key="name",
-    )
+#@app.route("/deleteproject", methods=["GET", "POST"])
+#def delete_project():
+#    return delete_by_field(
+#        collection=projects,
+#        field="name",
+#        value=request.args.get("name"),
+#        missing_message="Missing project name",
+#        not_found_message="Project not found",
+#        success_message="Project deleted successfully",
+#        response_key="name",
+#    )
 
 
-@app.route("/insertexperience", methods=["GET", "POST"])
-def insert_experience():
-    experience = {
-        "title": request.args.get("title"),
-        "role": request.args.get("role"),
-        "period": request.args.get("period"),
-    }
-    experiences.insert_one(experience)
-    return jsonify({"message": "Experience inserted successfully"}), 200
+#@app.route("/insertexperience", methods=["GET", "POST"])
+#def insert_experience():
+#    experience = {
+#        "title": request.args.get("title"),
+#        "role": request.args.get("role"),
+#        "period": request.args.get("period"),
+#    }
+#    experiences.insert_one(experience)
+#    return jsonify({"message": "Experience inserted successfully"}), 200
 
 
 @app.route("/getexperience", methods=["GET", "POST"])
@@ -235,33 +235,33 @@ def get_all_experiences():
     return jsonify(all_items), 200
 
 
-@app.route("/deleteexperience", methods=["GET", "POST"])
-def delete_experience():
-    return delete_by_field(
-        collection=experiences,
-        field="title",
-        value=request.args.get("title"),
-        missing_message="Missing experience title",
-        not_found_message="Experience not found",
-        success_message="Experience deleted successfully",
-        response_key="title",
-    )
+#@app.route("/deleteexperience", methods=["GET", "POST"])
+#def delete_experience():
+#    return delete_by_field(
+#        collection=experiences,
+#        field="title",
+#        value=request.args.get("title"),
+#        missing_message="Missing experience title",
+#        not_found_message="Experience not found",
+#        success_message="Experience deleted successfully",
+#        response_key="title",
+#    )
 
 
-@app.route("/inserttech", methods=["GET", "POST"])
-def insert_tech():
-    name = request.args.get("name")
-    label = request.args.get("label") or name
-    alt = request.args.get("alt") or name
-
-    tech = {
-        "name": name,
-        "label": label,
-        "image": request.args.get("image"),
-        "alt": alt,
-    }
-    techstack.insert_one(tech)
-    return jsonify({"message": "Tech inserted successfully"}), 200
+#@app.route("/inserttech", methods=["GET", "POST"])
+#def insert_tech():
+#    name = request.args.get("name")
+#    label = request.args.get("label") or name
+#    alt = request.args.get("alt") or name
+#
+#    tech = {
+#        "name": name,
+#        "label": label,
+#        "image": request.args.get("image"),
+#        "alt": alt,
+#    }
+#    techstack.insert_one(tech)
+#    return jsonify({"message": "Tech inserted successfully"}), 200
 
 
 @app.route("/gettech", methods=["GET", "POST"])
@@ -296,17 +296,17 @@ def get_all_techstack():
     return jsonify(all_items), 200
 
 
-@app.route("/deletetech", methods=["GET", "POST"])
-def delete_tech():
-    return delete_by_field(
-        collection=techstack,
-        field="name",
-        value=request.args.get("name"),
-        missing_message="Missing tech name",
-        not_found_message="Tech not found",
-        success_message="Tech deleted successfully",
-        response_key="name",
-    )
+#@app.route("/deletetech", methods=["GET", "POST"])
+#def delete_tech():
+#    return delete_by_field(
+#        collection=techstack,
+#        field="name",
+#        value=request.args.get("name"),
+#        missing_message="Missing tech name",
+#        not_found_message="Tech not found",
+#        success_message="Tech deleted successfully",
+#        response_key="name",
+#    )
 
 
 if __name__ == "__main__":
