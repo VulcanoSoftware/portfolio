@@ -62,8 +62,9 @@ def home():
     
     return (
         f'<h3>Welcome to the api homepage</h3><br>'
-        f'If you want to go to the actual website, click <a href="{base_host}:3000">here</a>.<br>'
-        f'If you want to go to the api docs, click <a href="{base_host}:3000/api.html">here</a>.'
+        # je kan achter base_host achter de brackets ook gewoon de poort zetten indien nodig
+        f'If you want to go to the actual website, click <a href="{base_host}">here</a>.<br>'
+        f'If you want to go to the api docs, click <a href="{base_host}/api.html">here</a>.'
     )
 
 
