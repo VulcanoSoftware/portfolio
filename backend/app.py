@@ -55,11 +55,11 @@ def split_tags(raw_tags):
 
 @app.route("/")
 def home():
-    current_host = request.url_root.replace(":5000/", "")
+    current_host = request.url_root.rstrip("/")
     return (
         f'<h3>Welcome to the api homepage</h3><br>'
         f'If you want to go to the actual website, click <a href="{current_host}:3000">here</a>.<br>'
-        f'If you want to go to the api docs, click <a href="{current_host}:3000/api.html">here</a>.'
+        f'If you want to go to the api docs, click <a href="{current_host}:5300/api.html">here</a>.'
     )
 
 
